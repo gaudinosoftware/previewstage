@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AppSpotlight User Guide</title>
+<meta name="description" content="How to use AppSpotlight: the editor, sidebars, Inspector, device frames, Preview Mode, exporting and keyboard shortcuts.">
+<link rel="icon" href="icon.svg">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="inner">
+    <a class="brand" href="./"><img class="mark" src="icon.svg" alt="">AppSpotlight</a>
+    <nav>
+      <a href="support.html" aria-current="page">User Guide</a>
+      <a href="#faq">Help</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="hero" style="padding-bottom:8px">
+    <p class="eyebrow">Support</p>
+    <h1>User Guide</h1>
+    <p class="lede">Everything in AppSpotlight, from your first project to exporting every App Store size. Questions or ideas? Write to <a href="mailto:gaudino.software@gmail.com">gaudino.software@gmail.com</a>.</p>
+  </div>
+
+  <div class="guide">
+    <nav class="toc" aria-label="Contents">
+      <p>Contents</p>
+      <ol>
+        <li><a href="#start">Getting started</a></li>
+        <li><a href="#editor">The editor at a glance</a></li>
+        <li><a href="#toolbar">Toolbar</a></li>
+        <li><a href="#sidebar">Left sidebar</a>
+          <ol>
+            <li><a href="#screens">Screens</a></li>
+            <li><a href="#assets">Assets</a></li>
+            <li><a href="#templates">Templates</a></li>
+            <li><a href="#brand">Brand</a></li>
+          </ol>
+        </li>
+        <li><a href="#canvas">Canvas</a></li>
+        <li><a href="#inspector">Inspector</a>
+          <ol>
+            <li><a href="#inspector-screen">Screen &amp; project</a></li>
+            <li><a href="#inspector-layer">A selected layer</a></li>
+            <li><a href="#inspector-multi">Several layers</a></li>
+          </ol>
+        </li>
+        <li><a href="#devices">Device frames</a></li>
+        <li><a href="#library">Device Library</a></li>
+        <li><a href="#preview">Preview Mode</a></li>
+        <li><a href="#export">Exporting</a></li>
+        <li><a href="#shortcuts">Keyboard shortcuts</a></li>
+        <li><a href="#faq">Help &amp; FAQ</a></li>
+      </ol>
+    </nav>
+
+    <article>
+
+      <!-- 1 -->
+      <section class="chapter" id="start">
+        <span class="num">Chapter 1</span>
+        <h2>Getting started</h2>
+        <p>When you open AppSpotlight you see <span class="ui">Home</span>: your recent projects and every template. From here you can start a new project, open one you've made, or open the <span class="ui">Device Library</span> with the round button in the bottom-right corner.</p>
+
+        <h3>Create a project</h3>
+        <ol>
+          <li>Click <span class="ui">New Project</span> (<kbd>⌘N</kbd>), or click any template to start with it.</li>
+          <li>Choose a <strong>Platform</strong>: <span class="ui">App Store</span> for listing screenshots, or <span class="ui">Social Media</span> for posts and stories. Website and Press Kit are coming soon.</li>
+          <li>Choose your <strong>Devices</strong>: iPhone, iPad, Mac, Apple Watch, Vision Pro or Apple TV. For social media you can also choose <span class="ui">No Device</span>.</li>
+          <li>Pick a <strong>Size</strong>. The recommended App Store size is marked; other sizes are adapted for you when you export. Use the Portrait / Landscape switch where it applies.</li>
+          <li>Under <strong>Start</strong>, choose <span class="ui">Start Blank</span> or <span class="ui">Choose a Style</span> to pick a template.</li>
+          <li>Name your project and click <span class="ui">Create</span>.</li>
+        </ol>
+
+        <h3>Manage projects</h3>
+        <p>Right-click a project on Home to <span class="ui">Open</span>, <span class="ui">Rename</span>, <span class="ui">Duplicate</span> or <span class="ui">Move to Trash</span>. Projects save automatically as you work.</p>
+      </section>
+
+      <!-- 2 -->
+      <section class="chapter" id="editor">
+        <span class="num">Chapter 2</span>
+        <h2>The editor at a glance</h2>
+        <p>Every project opens in its own window, with four areas.</p>
+
+        <figure class="figure">
+          <div class="mock" aria-hidden="true" style="position:relative">
+            <div class="titlebar">
+              <div class="dots"><i></i><i></i><i></i></div>
+              <span class="pill">◧</span>
+              <span class="lbl">My App</span>
+              <span class="pill" style="margin-left:auto">Aa &nbsp; ▯▾ &nbsp; ▣ &nbsp; ◇▾</span>
+              <span class="pill" style="margin-left:auto">↶ ↷</span><span class="pill">▶ &nbsp; ⇪</span><span class="pill">◨</span>
+            </div>
+            <div class="body">
+              <div class="side">
+                <div class="tabs"><span class="on">▤</span><span>▣</span><span>▦</span><span>Aa</span></div>
+                <div style="display:flex;justify-content:space-between;align-items:center"><span class="lbl">Screens</span><span class="pill" style="padding:1px 6px">+</span></div>
+                <div class="row sel"><span class="thumb"></span><span><b>Screen 1</b><br><span class="dim">Your headline</span></span></div>
+                <div class="row"><span class="thumb"></span><span>Screen 2</span></div>
+                <span class="lbl" style="margin-top:6px">Layers</span>
+                <div class="row"><span class="sq"></span><span><b>Device</b><br><span class="dim">Mock frame</span></span></div>
+                <div class="row"><span class="sq"></span><span><b>Your headline</b><br><span class="dim">Headline</span></span></div>
+              </div>
+              <div class="canvas">
+                <div class="screen"><div class="h"></div><div class="phone"></div></div>
+                <div class="screen"><div class="h"></div><div class="phone"></div></div>
+                <div class="ctrls"><span class="pill">− 50% +</span><span class="pill">⤢ &nbsp; ⌗ &nbsp; ▥</span></div>
+              </div>
+              <div class="insp">
+                <div class="pill" style="border-radius:12px;padding:8px;gap:8px"><span class="thumb"></span><span><span class="dim">SCREEN 1 OF 2</span><br><b>Screen 1</b></span></div>
+                <span class="lbl">Screen Settings</span>
+                <div class="kv"><span class="dim">Name</span><span class="bar" style="height:14px"></span></div>
+                <div class="kv"><span class="dim">Background</span><div class="seg"><span class="on">Brand</span><span>Custom</span></div></div>
+                <span class="lbl" style="margin-top:6px">Project</span>
+                <div class="kv"><span class="dim">Size</span><span class="bar" style="height:14px"></span></div>
+                <span class="lbl" style="margin-top:6px">All Screens</span>
+                <div class="kv"><span class="dim">Frame</span><div class="seg"><span>Official</span><span class="on">Mock</span></div></div>
+              </div>
+            </div>
+            <span class="callout" style="top:8px;left:47%">1</span>
+            <span class="callout" style="top:58px;left:9%">2</span>
+            <span class="callout" style="top:58px;left:50%">3</span>
+            <span class="callout" style="top:58px;right:9%">4</span>
+          </div>
+          <div class="legend">
+            <div><b>1</b><span><strong>Toolbar</strong>: insert things, undo, preview and export.</span></div>
+            <div><b>2</b><span><strong>Left sidebar</strong>: Screens, Assets, Templates and Brand.</span></div>
+            <div><b>3</b><span><strong>Canvas</strong>: your screens, side by side, where you design.</span></div>
+            <div><b>4</b><span><strong>Inspector</strong>: settings for whatever is selected.</span></div>
+          </div>
+        </figure>
+
+        <div class="note"><strong>A simple rule</strong>Select something on the canvas and the Inspector shows its settings. Click an empty spot and the Inspector shows the current screen, the project, and tools that change every screen at once.</div>
+      </section>
+
+      <!-- 3 -->
+      <section class="chapter" id="toolbar">
+        <span class="num">Chapter 3</span>
+        <h2>Toolbar</h2>
+        <p>Hover over any button to see its name.</p>
+        <div class="defs">
+          <div>Sidebar</div><div>Shows or hides the left sidebar.</div>
+          <div>Text (Aa)</div><div>Adds a text layer to the current screen and starts editing it.</div>
+          <div>Device ▾</div><div>Adds a device. <span class="ui">Mock</span> lists the drawn frames (iPhone 18 Pro Max, 18 Pro, 17, Duo, Screen Only and Two Devices Side by Side). <span class="ui">Apple (Downloaded)</span> lists the official Apple bezels you've downloaded. <span class="ui">Other Platforms</span> has iPad, Mac, Apple Watch, Vision Pro and Apple TV, and <span class="ui">Download More…</span> opens the Device Library.</div>
+          <div>Image</div><div>Adds images from your Mac to the current screen.</div>
+          <div>Shapes ▾</div><div>Adds a rectangle, ellipse, glow and other shapes, an SF Symbol, or your Brand Logo.</div>
+          <div>Undo / Redo</div><div>Steps back and forward through your changes (<kbd>⌘Z</kbd>, <kbd>⇧⌘Z</kbd>).</div>
+          <div>Preview Mode ▶</div><div>Shows your screenshots as customers will see them. See <a href="#preview">Preview Mode</a>.</div>
+          <div>Export ⇪</div><div>Exports your screenshots (<kbd>⌘E</kbd>). See <a href="#export">Exporting</a>.</div>
+          <div>Inspector</div><div>Shows or hides the Inspector on the right.</div>
+        </div>
+      </section>
+
+      <!-- 4 -->
+      <section class="chapter" id="sidebar">
+        <span class="num">Chapter 4</span>
+        <h2>Left sidebar</h2>
+        <p>The sidebar has four tabs at the top. Hover over a tab to see its name.</p>
+
+        <figure class="figure small-mock">
+          <div class="mock" aria-hidden="true" style="padding:12px;background:var(--m-panel)">
+            <div class="tabs"><span class="on">▤ Screens</span><span>▣ Assets</span><span>▦ Templates</span><span>Aa Brand</span></div>
+          </div>
+        </figure>
+
+        <h3 id="screens">Screens</h3>
+        <p>Your screenshot sequence, in the order it will appear on the App Store, and the layers of the current screen.</p>
+        <div class="defs">
+          <div>Screens list</div><div>Each screen with a thumbnail and its headline. Click to show it; double-click to rename. Drag to reorder. Drop screenshots from Finder onto a screen to fill it and the screens after it.</div>
+          <div>+ (Add Screen)</div><div>Adds a new screen that follows your template.</div>
+          <div>All Screens</div><div>Shows every screen side by side, so you can design them together.</div>
+          <div>Layers</div><div>Everything on the current screen, top layer first, with a short note on what each one is (for example <em>Mock frame · Screenshot</em> or <em>Headline</em>). Click to select; hover to show the lock and eye buttons. Drag to change the order.</div>
+          <div>Across All Screens</div><div>Layers that stretch across several screens, such as a panorama background or a spanning device.</div>
+        </div>
+        <p>Right-click a screen to rename, duplicate or delete it, or to apply its layout to every screen.</p>
+
+        <h3 id="assets">Assets</h3>
+        <p>Every image in the project. Drop screenshots anywhere in the window, or click <span class="ui">Import Screenshots…</span> (<kbd>⇧⌘I</kbd>). <span class="ui">Replace All…</span> swaps every screenshot in one step.</p>
+        <p>Right-click an image to <span class="ui">Use in Selected Device</span>, <span class="ui">Insert as Image</span>, <span class="ui">Use as Screen Background</span>, <span class="ui">Set as Brand Logo</span>, or remove it from the project.</p>
+
+        <h3 id="templates">Templates</h3>
+        <p>23 art-directed styles, each previewed with your own headlines and screenshots: Centered Device, Side by Side, Oversized Type, Edge Crop, Floating, Stacked Devices, Split, Cinematic Dark, Minimal White, Editorial, Full-Bleed Screenshot, Typography First, Continuous Panorama, Spotlight, Hero Zoom, Rise, Color Block, Poster, Award, Big Number, Diagonal, Aurora and Noir.</p>
+        <p>Click a template to apply it to every screen. Right-click to apply only its layout to the current screen. Your text and screenshots stay in place.</p>
+
+        <h3 id="brand">Brand</h3>
+        <p>The look of the whole project, set once. Linked text and devices on every screen follow it.</p>
+        <div class="defs">
+          <div>Brand card</div><div>Shows your brand's name. The <span class="ui">⋯</span> button applies a saved brand, saves the current one for other projects, or deletes saved ones.</div>
+          <div>Headline</div><div>Font, weight, color, tracking (letter spacing), leading (line spacing), case (As Typed or All Caps) and size.</div>
+          <div>Supporting Text</div><div>Font, weight, color, leading and size for the smaller line under the headline.</div>
+          <div>Layout</div><div>Text alignment, the margin around each screen, and Tone (Light or Dark).</div>
+          <div>Background</div><div>Solid, Linear, Radial or Image, with presets. <span class="ui">Continue across all screens</span> makes one background flow behind every screen, like a panorama.</div>
+          <div>Devices</div><div>The finish (color) used by mock devices that follow the Brand.</div>
+          <div>Apple Device Frames</div><div>How many official bezel packs you have, and a shortcut to the Device Library.</div>
+          <div>Logo</div><div>Choose your app icon or logo, then place it on a screen.</div>
+          <div>Apply Everywhere</div><div><span class="ui">Link All Text to Brand</span> makes every headline and supporting text follow these settings.</div>
+        </div>
+      </section>
+
+      <!-- 5 -->
+      <section class="chapter" id="canvas">
+        <span class="num">Chapter 5</span>
+        <h2>Canvas</h2>
+        <p>Your screens, at their real proportions. Click to select, drag to move, and drag the handles to resize or rotate. Double-click text to edit it.</p>
+        <div class="defs">
+          <div>Moving around</div><div>Scroll with two fingers to pan; pinch or <kbd>⌘</kbd>-scroll to zoom. Double-tap with two fingers to switch between fitting everything and 100%.</div>
+          <div>Smart guides</div><div>While you drag, a dashed red line marks the center of the screen and turns solid green when your layer is exactly centered. Layers snap to the center, edges and other layers. Turn guides on or off with the ruler button or <kbd>⌘;</kbd>.</div>
+          <div>Canvas controls</div><div>At the bottom: zoom out, zoom level, zoom in, Zoom to Fit, Guides, and Panorama View (screens joined edge to edge, for designs that flow across them).</div>
+          <div>Adding screenshots</div><div>Drop images straight onto a device. An empty device shows <span class="ui">Drop a screenshot</span> with a <span class="ui">Choose…</span> button.</div>
+          <div>Apple's guidelines card</div><div>If a device with an official Apple bezel is rotated, tilted, cropped, shadowed or covered, a card appears in the top-right corner explaining what Apple asks for. Click <span class="ui">Straighten</span> to fix it, or <span class="ui">Use Mock</span> to switch to a mock frame. Hidden devices don't count.</div>
+          <div>Orientation changes</div><div>If you switch the project between portrait and landscape, your layout is kept and devices turn with it. A bar offers to re-apply your template, laid out fresh for the new shape.</div>
+        </div>
+      </section>
+
+      <!-- 6 -->
+      <section class="chapter" id="inspector">
+        <span class="num">Chapter 6</span>
+        <h2>Inspector</h2>
+        <p>The panel on the right always shows settings for what you're working on. Long sections can be collapsed with the chevron next to their title.</p>
+
+        <h3 id="inspector-screen">When nothing is selected: screen &amp; project</h3>
+        <figure class="figure small-mock">
+          <div class="mock" aria-hidden="true" style="padding:12px;background:var(--m-panel);display:flex;flex-direction:column;gap:8px">
+            <div class="pill" style="border-radius:14px;padding:10px;gap:10px"><span class="thumb" style="width:24px;height:40px"></span><span><span class="dim">SCREEN 2 OF 3</span><br><b style="font-size:13px">Screen 2</b><br><span class="dim">Select a layer on the canvas to edit it.</span></span><span style="margin-left:auto" class="dim">⌃<br>⌄</span></div>
+            <span class="lbl">Screen Settings</span>
+            <div class="kv"><span class="dim">Background</span><div class="seg"><span class="on">Brand</span><span>Custom</span></div></div>
+          </div>
+        </figure>
+        <div class="defs">
+          <div>Screen card</div><div>Which screen you're on (for example <em>Screen 2 of 3</em>), with arrows to move to the previous or next screen.</div>
+          <div>Screen Settings</div><div>The screen's name and background: <span class="ui">Brand</span> follows the Brand tab, <span class="ui">Custom</span> gives this screen its own fill. <span class="ui">Duplicate</span> and <span class="ui">Delete</span> act on the whole screen.</div>
+          <div>Project</div><div>Project name, platform, devices, size and orientation.</div>
+          <div>All Screens</div><div>Changes every screen at once: <span class="ui">Frame</span> (Official or Mock), <span class="ui">Device</span>, <span class="ui">Pose</span>, <span class="ui">Shadow</span> and <span class="ui">Text Align</span>. Each shows its current choice, or <em>Mixed</em> when screens differ. Below are <span class="ui">Apply Layout to All Screens</span>, <span class="ui">Replace Screenshots…</span> and <span class="ui">Edit Brand Typography…</span>.</div>
+        </div>
+
+        <h3 id="inspector-layer">When a layer is selected</h3>
+        <p>A path at the top, like <span class="ui">‹ Screen 1 / Device Layer</span>, shows where the layer lives. Click <span class="ui">‹ Screen 1</span> to go back to the screen's settings. Next to the layer's name are buttons to lock and hide it.</p>
+        <div class="defs">
+          <div>Arrange</div><div>Position (X, Y), size (W, H) and rotation, with buttons to rotate 90° left or right. The align bar lines the layer up with the screen's edges or center. <span class="ui">Order</span> moves it forward or backward. <span class="ui">Span Screens</span> lets it stretch across neighboring screens (needs two or more screens).</div>
+          <div>Text</div><div>Font, weight, color, tracking, alignment and caps. Edit the words themselves by double-clicking the text on the canvas. Headlines and supporting text can be <span class="ui">Linked to Brand</span> or <span class="ui">Detached</span> to style them on their own.</div>
+          <div>Device</div><div><span class="ui">Frame</span> (Official or Mock), <span class="ui">Device</span>, <span class="ui">Color</span>, and for iPhone Duo, <span class="ui">Fold</span> (Open or Closed). Then the <span class="ui">Screen</span> it shows, with <span class="ui">Replace…</span> and <span class="ui">Remove</span>, <span class="ui">Fit</span> (Fill or Fit) and <span class="ui">Orientation</span> (Portrait or Landscape).</div>
+          <div>Presentation</div><div>Quick looks: <span class="ui">Flat</span>, <span class="ui">Floating</span> and <span class="ui">Tilted</span>, plus <span class="ui">Reset</span>. Below, fine-tune the <span class="ui">Pose</span> (Flat, Turn Left, Turn Right, Lay Back) and its <span class="ui">Amount</span>.</div>
+          <div>Image &amp; Crop</div><div>The image source, Fit and Mask, then crop with Scale and Offset. <span class="ui">Reset Crop</span> starts over.</div>
+          <div>Shape</div><div>Shape type, fill (Solid, Linear, Radial or Image) and stroke.</div>
+          <div>Symbol</div><div>Click the symbol to open the browser: search by name or meaning (try “thumbs” or “award”), or browse categories such as Popular, Communication, Commerce, Nature and Arrows. Twelve <span class="ui">Quick</span> picks sit underneath, plus Color and Weight.</div>
+          <div>Appearance</div><div>Opacity, blur, corner radius and shadow (color, radius and offset).</div>
+        </div>
+
+        <h3 id="inspector-multi">When several layers are selected</h3>
+        <p>Hold <kbd>⇧</kbd> or <kbd>⌘</kbd> and click to select more than one layer. The Inspector then offers alignment, distribution (horizontally or vertically), <span class="ui">Group</span> and <span class="ui">Ungroup</span>, plus opacity and shadow for all of them.</p>
+      </section>
+
+      <!-- 7 -->
+      <section class="chapter" id="devices">
+        <span class="num">Chapter 7</span>
+        <h2>Device frames</h2>
+        <p>Every device can use one of two kinds of frame. Switch with <span class="ui">Frame</span> in the Inspector, for one device or for all screens at once.</p>
+        <div class="grid">
+          <div class="card"><h3>Mock</h3><p>AppSpotlight's own drawn frames. Always available, in several finishes, and free to tilt, rotate or shadow however you like.</p></div>
+          <div class="card"><h3>Official</h3><p>Apple's own product bezels, downloaded from Apple when you choose them. They match the real devices exactly, and Apple asks that they're used as-is.</p></div>
+        </div>
+        <p style="margin-top:16px">Only downloaded Apple devices can be chosen. Ones you haven't downloaded are dimmed, with a ↓ button to download them right there. If you switch to Official before downloading anything, AppSpotlight keeps your mock and offers the download. Your device switches over when it's ready.</p>
+        <p>Mock and Official each remember their own choice, so switching back and forth never loses your setup.</p>
+      </section>
+
+      <!-- 8 -->
+      <section class="chapter" id="library">
+        <span class="num">Chapter 8</span>
+        <h2>Device Library</h2>
+        <p>Open it from the round button on Home, from <span class="ui">Download More…</span> in the Device menu, or with <kbd>⌥⌘L</kbd>.</p>
+        <ul>
+          <li>Filter by <span class="ui">All</span>, <span class="ui">iPhone</span>, <span class="ui">iPad</span>, <span class="ui">Mac</span>, <span class="ui">Watch</span> or <span class="ui">TV</span>, and turn on <span class="ui">Installed</span> to see only what you've downloaded.</li>
+          <li>Click <span class="ui">Get</span> to download a pack. Installed packs show a green check.</li>
+          <li>The first time, you'll be asked to accept Apple's license for its marketing artwork. The bezels are Apple's, and they're always free in AppSpotlight.</li>
+        </ul>
+      </section>
+
+      <!-- 9 -->
+      <section class="chapter" id="preview">
+        <span class="num">Chapter 9</span>
+        <h2>Preview Mode</h2>
+        <p>Click <span class="ui">▶</span> in the toolbar (<kbd>⌥⌘P</kbd>) to see your screenshots the way customers will. Choose a view at the top:</p>
+        <div class="defs">
+          <div>Product Page</div><div>Your screenshots in a row under your app's name, as on your App Store page.</div>
+          <div>Search Result</div><div>The first screenshots as they appear in App Store search.</div>
+          <div>Focus</div><div>One screenshot at a time, full size. Use the arrow buttons, <kbd>←</kbd> <kbd>→</kbd> or <kbd>Space</kbd>.</div>
+        </div>
+        <p>Screens with an empty device are left out, and a note tells you which ones. Press <kbd>Esc</kbd> or close the window to return to the editor.</p>
+      </section>
+
+      <!-- 10 -->
+      <section class="chapter" id="export">
+        <span class="num">Chapter 10</span>
+        <h2>Exporting</h2>
+        <p>Click <span class="ui">Export</span> (<kbd>⌘E</kbd>).</p>
+        <ol>
+          <li>Choose which screens to export: <span class="ui">All</span>, <span class="ui">Current</span>, or <span class="ui">Choose</span> to pick them.</li>
+          <li>Under <span class="ui">Sizes</span>, tick the sizes you need. Sizes Apple requires are marked <em>Required</em>. Other sizes are adapted automatically from your layout.</li>
+          <li>Set how <span class="ui">File Names</span> are written; an example shows the result.</li>
+          <li>Export. Images are saved as PNG without transparency, which App Store Connect requires.</li>
+        </ol>
+        <div class="note"><strong>Before you export</strong>Every device needs a screenshot: blank screens can't ship, so export waits until they're filled. If an Apple bezel doesn't follow Apple's guidelines, you'll see a warning first.</div>
+      </section>
+
+      <!-- 11 -->
+      <section class="chapter" id="shortcuts">
+        <span class="num">Chapter 11</span>
+        <h2>Keyboard shortcuts</h2>
+        <table class="keys">
+          <tr><th>Projects</th><th></th></tr>
+          <tr><td>New Project</td><td><kbd>⌘N</kbd></td></tr>
+          <tr><td>Show Projects</td><td><kbd>⇧⌘0</kbd></td></tr>
+          <tr><td>Device Library</td><td><kbd>⌥⌘L</kbd></td></tr>
+          <tr><td>Save</td><td><kbd>⌘S</kbd></td></tr>
+          <tr><td>Import Screenshots</td><td><kbd>⇧⌘I</kbd></td></tr>
+          <tr><td>Export</td><td><kbd>⌘E</kbd></td></tr>
+        </table>
+        <table class="keys">
+          <tr><th>Editing</th><th></th></tr>
+          <tr><td>Undo / Redo</td><td><kbd>⌘Z</kbd> <kbd>⇧⌘Z</kbd></td></tr>
+          <tr><td>Cut / Copy / Paste</td><td><kbd>⌘X</kbd> <kbd>⌘C</kbd> <kbd>⌘V</kbd></td></tr>
+          <tr><td>Duplicate</td><td><kbd>⌘D</kbd></td></tr>
+          <tr><td>Select All</td><td><kbd>⌘A</kbd></td></tr>
+          <tr><td>Copy Style / Paste Style</td><td><kbd>⌥⌘C</kbd> <kbd>⌥⌘V</kbd></td></tr>
+          <tr><td>Insert Text</td><td><kbd>⌥⌘T</kbd></td></tr>
+          <tr><td>Insert Device</td><td><kbd>⌥⌘D</kbd></td></tr>
+          <tr><td>New Screen</td><td><kbd>⇧⌘N</kbd></td></tr>
+        </table>
+        <table class="keys">
+          <tr><th>Arrange</th><th></th></tr>
+          <tr><td>Bring Forward / Send Backward</td><td><kbd>⌘]</kbd> <kbd>⌘[</kbd></td></tr>
+          <tr><td>Bring to Front / Send to Back</td><td><kbd>⌥⌘]</kbd> <kbd>⌥⌘[</kbd></td></tr>
+          <tr><td>Group / Ungroup</td><td><kbd>⌘G</kbd> <kbd>⇧⌘G</kbd></td></tr>
+          <tr><td>Lock</td><td><kbd>⌘L</kbd></td></tr>
+          <tr><td>Hide</td><td><kbd>⇧⌘H</kbd></td></tr>
+          <tr><td>Apply Layout to All Screens</td><td><kbd>⇧⌘L</kbd></td></tr>
+        </table>
+        <table class="keys">
+          <tr><th>View</th><th></th></tr>
+          <tr><td>Preview Mode</td><td><kbd>⌥⌘P</kbd></td></tr>
+          <tr><td>Zoom In / Zoom Out</td><td><kbd>⌘=</kbd> <kbd>⌘−</kbd></td></tr>
+          <tr><td>Zoom to Fit / Actual Size</td><td><kbd>⌘0</kbd> <kbd>⌘1</kbd></td></tr>
+          <tr><td>Show or Hide Smart Guides</td><td><kbd>⌘;</kbd></td></tr>
+          <tr><td>Panorama View</td><td><kbd>⌥⌘K</kbd></td></tr>
+          <tr><td>Show or Hide Inspector</td><td><kbd>⌥⌘I</kbd></td></tr>
+        </table>
+      </section>
+
+      <!-- 12 -->
+      <section class="chapter" id="faq">
+        <span class="num">Chapter 12</span>
+        <h2>Help &amp; FAQ</h2>
+        <details><summary>An Apple device in the menu is dimmed. Why can't I choose it?</summary><p>It hasn't been downloaded yet. Click its ↓ button, or open the Device Library and click Get. When the download finishes, you can choose it.</p></details>
+        <details><summary>Why won't my project export?</summary><p>At least one device has no screenshot. Blank screens can't go on the App Store, so add a screenshot to every device, or delete the empty screen. The export sheet shows how many are missing.</p></details>
+        <details><summary>What does “Apple's guidelines” mean?</summary><p>Apple asks that its product bezels are shown upright, uncropped, without added shadows or reflections, and with nothing on top. If you want a tilted or shadowed look, switch that device to a Mock frame, which you can style freely.</p></details>
+        <details><summary>Why are some screens missing in Preview Mode?</summary><p>Screens with an empty device are left out of the preview. Add a screenshot and they'll appear.</p></details>
+        <details><summary>Can I use any SF Symbol?</summary><p>Thousands of them. Apple's logo and symbols that represent Apple's own products and features aren't available, because Apple's license doesn't allow them in your artwork.</p></details>
+        <details><summary>I changed the orientation and my layout looks different.</summary><p>Your layout is kept and resized for the new shape, and devices turn with it. For a fresh layout, click Re-apply in the bar at the bottom of the canvas, or press <kbd>⌘Z</kbd> to undo the change.</p></details>
+        <details><summary>Where are my projects saved?</summary><p>On your Mac, automatically, as you work. Open them any time from Home (<kbd>⇧⌘0</kbd>).</p></details>
+        <div class="note" style="margin-top:22px"><strong>Still need help?</strong>Email <a href="mailto:gaudino.software@gmail.com">gaudino.software@gmail.com</a>. A screenshot of what you see helps a lot.</div>
+      </section>
+
+    </article>
+  </div>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <a href="./">AppSpotlight</a>
+    <a href="support.html">User Guide</a>
+    <a href="privacy.html">Privacy</a>
+    <a class="spacer" href="mailto:gaudino.software@gmail.com">gaudino.software@gmail.com</a>
+  </div>
+</footer>
+</body>
+</html>
