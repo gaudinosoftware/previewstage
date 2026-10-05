@@ -41,6 +41,7 @@
             <li><a href="#assets">Assets</a></li>
             <li><a href="#templates">Templates</a></li>
             <li><a href="#brand">Brand</a></li>
+            <li><a href="#follow-brand">How the Brand works</a></li>
           </ol>
         </li>
         <li><a href="#stage">Stage</a></li>
@@ -151,7 +152,7 @@
               <div>Screens list</div><div>Each screen with a thumbnail and its headline. Click to show it; double-click to rename. Drag to reorder. Drop screenshots from Finder onto a screen to fill it and the screens after it.</div>
               <div>+ (Add Screen)</div><div>Adds a new screen that follows your template.</div>
               <div>All Screens</div><div>Shows every screen side by side, so you can design them together.</div>
-              <div>Layers</div><div>Everything on the current screen, top layer first, with a short note on what each one is (for example <em>Mock frame · Screenshot</em> or <em>Headline</em>). Click to select; hover to show the lock and eye buttons; drag to change the order.</div>
+              <div>Layers</div><div>Everything on the current screen, top layer first, with a short note on what each one is (for example <em>Mock frame · Screenshot</em> or <em>Headline</em>). Click to select; hover to show the lock and eye buttons; drag to change the order. A broken-link icon marks an item detached from the Brand.</div>
               <div>Across All Screens</div><div>Layers that stretch across several screens, such as a panorama background or a spanning device.</div>
             </div>
             <p>Right-click a screen to rename, duplicate or delete it, or to apply its layout to every screen.</p>
@@ -177,22 +178,39 @@
         </div>
 
         <div class="split reverse" id="brand">
-          <div class="media"><img width="580" height="1500" class="shot" src="images/backstage-brand.jpg" alt="Backstage: Brand tab" loading="lazy"></div>
+          <div class="media"><img width="580" height="1500" class="shot" src="images/backstage-brand.jpg" alt="Backstage: Brand tab, typography and layout" loading="lazy"></div>
           <div class="text">
             <h3>Brand</h3>
-            <p>The look of the whole project, set once. Linked text and devices on every screen follow it.</p>
+            <p>The look of your whole project, set once. Every screen that follows the Brand updates as you change it.</p>
             <div class="defs">
               <div>Brand card</div><div>Your brand's name. The <span class="ui">⋯</span> button applies a saved brand, saves the current one for other projects, or deletes saved ones.</div>
-              <div>Headline</div><div>Font, weight, color, tracking, leading, case (As Typed or All Caps) and size.</div>
-              <div>Supporting Text</div><div>Font, weight, color, leading and size for the smaller line under the headline.</div>
+              <div>Headline</div><div>Font, weight, color, tracking, leading and case (As Typed or All Caps). <span class="ui">Smaller</span> / <span class="ui">Larger</span> resize headlines.</div>
+              <div>Supporting Text</div><div>Font, weight, color and leading for the smaller line under the headline, plus <span class="ui">Smaller</span> / <span class="ui">Larger</span>.</div>
               <div>Layout</div><div>Text alignment, the margin around each screen, and Tone (Light or Dark).</div>
-              <div>Background</div><div>Solid, Linear, Radial or Image, with presets. <span class="ui">Continue across all screens</span> makes one background flow behind every screen.</div>
-              <div>Devices</div><div>The finish (color) used by mock devices that follow the Brand.</div>
-              <div>Apple Device Frames</div><div>How many official bezel packs you have, and a shortcut to the Device Library.</div>
-              <div>Logo</div><div>Choose your app icon or logo, then place it on a screen.</div>
-              <div>Apply Everywhere</div><div><span class="ui">Link All Text to Brand</span> makes every headline and supporting text follow these settings.</div>
+              <div>Background</div><div>Solid, Linear, Radial or Image, with presets. <span class="ui">Continue across all screens</span> makes one background flow behind every screen, like a panorama.</div>
             </div>
           </div>
+        </div>
+
+        <div class="split">
+          <div class="media"><img width="580" height="1500" class="shot" src="images/backstage-brand-2.jpg" alt="Backstage: Brand tab, devices and logo" loading="lazy"></div>
+          <div class="text">
+            <div class="defs">
+              <div>Devices</div><div>The Brand device: <span class="ui">Frame</span> (Official or Mock), <span class="ui">Device</span> and <span class="ui">Color</span>. Every device on screens that follow the Brand uses it. <span class="ui">Device Library</span> downloads more Apple devices.</div>
+              <div>Logo</div><div>Drop your app icon or logo onto the empty slot, or click it to choose a file. Then <span class="ui">Place on Screen</span>, <span class="ui">Replace…</span> or <span class="ui">Remove</span>.</div>
+              <div>Apply Everywhere</div><div><span class="ui">Follow Brand on All Screens</span> turns Follow Brand back on for every screen you styled by hand.</div>
+            </div>
+            <div class="note"><strong>Changes apply straight away</strong>There's nothing to refresh. A short note at the bottom of the Stage tells you how many screens updated, and which items were left alone.</div>
+          </div>
+        </div>
+
+        <h3 id="follow-brand">How the Brand works</h3>
+        <p>Each screen has a <span class="ui">Follow Brand</span> switch in its Screen Settings. While it's on, that screen's background, headline and subheadline style, and devices all come from the Brand, and those controls are locked in the Inspector with a <span class="ui">Set by Brand</span> note.</p>
+        <div class="defs">
+          <div>Follow Brand on</div><div>The screen updates whenever the Brand changes.</div>
+          <div>Follow Brand off</div><div>The screen keeps its current look, and everything on it can be styled by hand. Brand changes leave it alone.</div>
+          <div>Detach one item</div><div>Right-click a headline, subheadline or device on the Stage and choose <span class="ui">Detach from Brand</span>. Only that item stops following; the rest of the screen still does. In Layers it shows a broken-link icon and <em>Detached</em>.</div>
+          <div>Reattach</div><div>Right-click it again and choose <span class="ui">Reattach to Brand</span>. It picks up the current Brand style.</div>
         </div>
       </section>
 
@@ -207,6 +225,8 @@
           <div>Stage controls</div><div>At the bottom: zoom out, zoom level, zoom in, Zoom to Fit, Guides, and Panorama View (screens joined edge to edge, for designs that flow across them).</div>
           <div>Adding screenshots</div><div>Drop images straight onto a device. An empty device shows <span class="ui">Drop a screenshot</span> with a <span class="ui">Choose…</span> button.</div>
           <div>Apple's guidelines card</div><div>If a device with an official Apple bezel is rotated, tilted, cropped, shadowed or covered, a card appears in the top-right corner of the Stage explaining what Apple asks for. Click <span class="ui">Straighten</span> to fix it, or <span class="ui">Use Mock</span> to switch to a mock frame. Hidden devices don't count.</div>
+          <div>Right-click</div><div>Cut, copy, duplicate, arrange and span layers. Devices also offer <span class="ui">Add</span>, <span class="ui">Replace</span> or <span class="ui">Remove Screenshot</span>. Items that follow the Brand offer <span class="ui">Detach from Brand</span>.</div>
+          <div>Brand updates</div><div>After you change the Brand, a short note at the bottom of the Stage shows what updated, then slides away.</div>
           <div>Orientation changes</div><div>If you switch the project between portrait and landscape, your layout is kept and devices turn with it. A bar offers to re-apply your template, laid out fresh for the new shape.</div>
         </div>
       </section>
@@ -223,7 +243,7 @@
             <h3>When nothing is selected: screen &amp; project</h3>
             <div class="defs">
               <div>Screen card</div><div>Which screen you're on (for example <em>Screen 1 of 3</em>), with arrows to move to the previous or next screen.</div>
-              <div>Screen Settings</div><div>The screen's name and background: <span class="ui">Brand</span> follows the Brand tab, <span class="ui">Custom</span> gives this screen its own fill. <span class="ui">Duplicate</span> and <span class="ui">Delete</span> act on the whole screen.</div>
+              <div>Screen Settings</div><div>The screen's name and the <span class="ui">Follow Brand</span> switch (see <a href="#follow-brand">How the Brand works</a>). With it off, the screen's own background controls appear. <span class="ui">Duplicate</span> and <span class="ui">Delete</span> act on the whole screen.</div>
               <div>Project</div><div>Project name, platform, devices, size and orientation.</div>
               <div>All Screens</div><div>Changes every screen at once: <span class="ui">Frame</span> (Official or Mock), <span class="ui">Device</span>, <span class="ui">Pose</span>, <span class="ui">Shadow</span> and <span class="ui">Text Align</span>. Each shows its current choice, or <em>Mixed</em> when screens differ. Below are <span class="ui">Apply Layout to All Screens</span>, <span class="ui">Replace Screenshots…</span> and <span class="ui">Edit Brand Typography…</span>.</div>
             </div>
@@ -237,7 +257,7 @@
             <p>A path at the top, like <span class="ui">‹ Screen 1 / Device Layer</span>, shows where the layer lives. Click <span class="ui">‹ Screen 1</span> to go back to the screen's settings. Next to the layer's name are buttons to lock and hide it.</p>
             <div class="defs">
               <div>Arrange</div><div>Position (X, Y), size (W, H) and rotation, with buttons to rotate 90° left or right. The align bar lines the layer up with the screen. <span class="ui">Order</span> moves it forward or backward. <span class="ui">Span Screens</span> lets it stretch across neighboring screens.</div>
-              <div>Device</div><div><span class="ui">Frame</span> (Official or Mock), <span class="ui">Device</span>, <span class="ui">Color</span>, and for iPhone Duo, <span class="ui">Fold</span>. Then the <span class="ui">Screen</span> it shows, with <span class="ui">Replace…</span> and <span class="ui">Remove</span>, <span class="ui">Fit</span> (Fill or Fit) and <span class="ui">Orientation</span>.</div>
+              <div>Device</div><div><span class="ui">Frame</span> (Official or Mock), <span class="ui">Device</span>, <span class="ui">Color</span>, and for iPhone Duo, <span class="ui">Fold</span>. Then the <span class="ui">Screen</span> it shows, with <span class="ui">Replace…</span> and <span class="ui">Remove</span>, <span class="ui">Fit</span> (Fill or Fit) and <span class="ui">Orientation</span>. While the device follows the Brand, frame, device and color are set by the Brand.</div>
               <div>Presentation</div><div>Quick looks: <span class="ui">Flat</span>, <span class="ui">Floating</span> and <span class="ui">Tilted</span>, plus <span class="ui">Reset</span>. Below, fine-tune the <span class="ui">Pose</span> (Flat, Turn Left, Turn Right, Lay Back) and its <span class="ui">Amount</span>.</div>
               <div>Appearance</div><div>Opacity, blur, corner radius and shadow (color, radius and offset).</div>
             </div>
@@ -249,7 +269,7 @@
           <div class="text">
             <h3>Text, images, shapes and symbols</h3>
             <div class="defs">
-              <div>Text</div><div>Font, weight, color, tracking, alignment and caps. Edit the words themselves by double-clicking the text on the Stage. Headlines and supporting text can be <span class="ui">Linked to Brand</span> or <span class="ui">Detached</span> to style them on their own.</div>
+              <div>Text</div><div>Font, weight, color, tracking, alignment and caps. Edit the words themselves by double-clicking the text on the Stage. While the text follows the Brand, its style is locked (<span class="ui">Set by Brand</span>); size and the words stay editable.</div>
               <div>Image &amp; Crop</div><div>The image source, Fit and Mask, then crop with Scale and Offset. <span class="ui">Reset Crop</span> starts over.</div>
               <div>Shape</div><div>Shape type, fill (Solid, Linear, Radial or Image) and stroke.</div>
               <div>Symbol</div><div>Click the symbol to open the browser (below), plus twelve <span class="ui">Quick</span> picks, Color and Weight.</div>
@@ -275,7 +295,7 @@
           <div class="media"><img width="780" height="972" class="shot" src="images/device-picker.jpg" alt="Choosing an Apple device" loading="lazy"></div>
           <div class="text">
             <p>Only downloaded Apple devices can be chosen. Ones you haven't downloaded are dimmed, with a ↓ button to download them right there. If you switch to Official before downloading anything, PreviewStage keeps your mock and offers the download. Your device switches over when it's ready.</p>
-            <p>Mock and Official each remember their own choice, so switching back and forth never loses your setup.</p>
+            <p>Mock and Official each remember their own choice, so switching back and forth never loses your setup. To use the same device everywhere, set it once in Backstage › Brand › Devices.</p>
           </div>
         </div>
       </section>
@@ -378,6 +398,8 @@
         <details><summary>Can I use any SF Symbol?</summary><p>Thousands of them. Apple's logo and symbols that represent Apple's own products and features aren't available, because Apple's license doesn't allow them in your artwork.</p></details>
         <details><summary>I changed the orientation and my layout looks different.</summary><p>Your layout is kept and resized for the new shape, and devices turn with it. For a fresh layout, click Re-apply in the bar at the bottom of the Stage, or press <kbd>⌘Z</kbd> to undo the change.</p></details>
         <details><summary>Where did Backstage go?</summary><p>It may be hidden. Click the Backstage button at the left of the toolbar, or press <kbd>⌃⌘S</kbd>.</p></details>
+        <details><summary>Why can't I change a headline's font or a device?</summary><p>It follows the Brand, so its style is set in Backstage › Brand. Change it there to update every screen, turn off <span class="ui">Follow Brand</span> in Screen Settings to style that screen by hand, or right-click the item and choose <span class="ui">Detach from Brand</span>.</p></details>
+        <details><summary>What does the broken-link icon in Layers mean?</summary><p>That item was detached from the Brand, so it keeps its own style while the rest of its screen follows the Brand. Right-click it on the Stage and choose <span class="ui">Reattach to Brand</span> to link it again.</p></details>
         <details><summary>Where are my projects saved?</summary><p>On your Mac, automatically, as you work. Open them any time from Home (<kbd>⇧⌘0</kbd>).</p></details>
         <div class="note" style="margin-top:22px"><strong>Still need help?</strong>Email <a href="mailto:gaudino.software@gmail.com">gaudino.software@gmail.com</a>. A screenshot of what you see helps a lot.</div>
       </section>
