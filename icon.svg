@@ -16,11 +16,11 @@
     <linearGradient id="dark" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#333336"/><stop offset="1" stop-color="#080809"/></linearGradient>
   </defs>
   <rect class="bg" width="1024" height="1024" rx="230"/>
-  <g transform="translate(512 512) scale(0.74) translate(-600 -539)">
+  <g transform="translate(512 512) scale(0.70) translate(-600 -539)">
     <path class="solid curtain" opacity="0.26" d="M390 860 V675 A210 210 0 0 1 810 675 V860 Z"/>
     <path class="ink outer" opacity="0.8" d="M100 860 V675 A500 500 0 0 1 1100 675 V860"/>
     <path class="ink middle" opacity="0.9" d="M225 860 V675 A375 375 0 0 1 975 675 V860"/>
     <path class="ink inner" d="M350 860 V675 A250 250 0 0 1 850 675 V860"/>
-    <rect class="solid" x="-40" y="860" width="1280" height="100" rx="50"/>
+    <rect class="solid" x="0" y="860" width="1200" height="100" rx="50"/>
   </g>
 </svg>
