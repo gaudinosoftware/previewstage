@@ -417,6 +417,25 @@
   </div>
 </footer>
 <script>
+  // Contents: highlight the chapter (and sub-section) you're reading.
+  (function () {
+    var links = [].slice.call(document.querySelectorAll('.toc a[href^="#"]'));
+    var targets = links.map(function (a) { return document.getElementById(a.getAttribute('href').slice(1)); });
+    function update() {
+      var line = window.innerHeight * 0.3, current = -1;
+      targets.forEach(function (t, i) { if (t && t.getBoundingClientRect().top <= line) current = i; });
+      if (current < 0) current = 0;
+      var sub = links[current], chapter = sub;
+      var li = sub.closest('ol ol') ? sub.closest('ol ol').parentElement : null;
+      if (li) chapter = li.querySelector(':scope > a');
+      links.forEach(function (a) { a.classList.toggle('active', a === chapter || (a === sub && a !== chapter)); });
+    }
+    window.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('hashchange', update);
+    update();
+  })();
+</script>
+<script>
   // The pill follows you: User Guide while reading, Help once you reach Help & FAQ.
   (function () {
     var guide = document.querySelector('[data-nav="guide"]');

@@ -111,13 +111,35 @@ section.block { padding: 56px 0; border-top: 1px solid var(--line); }
 .guide { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 56px; padding: 40px 0 80px; }
 .guide > * { min-width: 0; }
 .mock .titlebar { overflow: hidden; }
-.toc { position: sticky; top: 84px; align-self: start; font-size: 14px; max-height: calc(100vh - 100px); overflow: auto; }
-.toc p { font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); margin: 0 0 8px; }
-.toc ol { list-style: none; padding: 0; margin: 0; }
-.toc li { margin: 0; }
-.toc a { display: block; padding: 5px 10px; border-radius: 8px; text-decoration: none; color: var(--ink-2); }
-.toc a:hover { background: var(--surface-2); color: var(--ink); }
-.toc ol ol a { padding-left: 22px; font-size: 13px; }
+.toc { position: sticky; top: 84px; align-self: start; font-size: 14px; max-height: calc(100vh - 100px); overflow: auto; padding-bottom: 12px; }
+.toc p { font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); margin: 0 0 10px 10px; }
+.toc ol { list-style: none; padding: 0; margin: 0; counter-reset: chapter; }
+.toc > ol > li { counter-increment: chapter; margin: 1px 0; }
+.toc > ol > li > a {
+  display: flex; align-items: baseline; gap: 10px; padding: 6px 10px; border-radius: 10px;
+  text-decoration: none; color: var(--ink); font-weight: 500;
+  transition: background-color .15s ease;
+}
+.toc > ol > li > a::before {
+  content: counter(chapter); min-width: 16px; font-size: 12px; font-weight: 600;
+  color: var(--ink-3); font-variant-numeric: tabular-nums;
+}
+.toc > ol > li > a:hover { background: color-mix(in srgb, var(--surface-2) 70%, transparent); }
+.toc > ol > li > a.active { background: var(--surface-2); font-weight: 600; box-shadow: inset 0 0 0 1px var(--line); }
+.toc > ol > li > a.active::before { color: var(--ink); }
+/* Sub-sections hang off a thin line under their chapter. */
+.toc ol ol { margin: 2px 0 6px 21px; padding-left: 12px; border-left: 1.5px solid var(--line); }
+.toc ol ol li { position: relative; }
+.toc ol ol a {
+  display: block; padding: 4px 8px; border-radius: 8px; font-size: 13px;
+  text-decoration: none; color: var(--ink-2);
+}
+.toc ol ol a:hover { color: var(--ink); background: color-mix(in srgb, var(--surface-2) 60%, transparent); }
+.toc ol ol a.active { color: var(--ink); font-weight: 600; }
+.toc ol ol a.active::before {
+  content: ""; position: absolute; left: -13.5px; top: 6px; bottom: 6px; width: 2px;
+  border-radius: 2px; background: var(--ink);
+}
 .chapter { padding: 8px 0 40px; border-bottom: 1px solid var(--line); margin-bottom: 40px; }
 .chapter:last-child { border-bottom: 0; }
 .num { font-size: 12px; font-weight: 600; letter-spacing: .08em; color: var(--ink-3); text-transform: uppercase; display: block; margin-bottom: 6px; }
