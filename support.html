@@ -5,12 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>PreviewStage User Guide</title>
 <meta name="description" content="How to use PreviewStage: Backstage, the Stage, the Inspector, iOS 27 Header and Search Results assets, Image Playground, device frames, Preview Mode, exporting and keyboard shortcuts.">
-<link rel="icon" href="favicon.ico?v=6" sizes="any">
-<link rel="icon" href="favicon-32.png?v=6" type="image/png" sizes="32x32">
-<link rel="icon" href="favicon-192.png?v=6" type="image/png" sizes="192x192">
-<link rel="icon" href="icon.svg?v=6" type="image/svg+xml">
-<link rel="apple-touch-icon" href="apple-touch-icon.png?v=6">
-<link rel="stylesheet" href="style.css?v=5">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png?v=7">
+<link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png?v=7">
+<link rel="shortcut icon" href="favicon.ico?v=7">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=7">
+<link rel="stylesheet" href="style.css?v=6">
 </head>
 <body>
 <header class="topbar">
@@ -33,6 +32,11 @@
 
   <div class="guide">
     <nav class="toc" aria-label="Contents">
+      <div class="search" role="search">
+        <input id="guide-search" type="search" placeholder="Search the guide" aria-label="Search the User Guide" autocomplete="off" spellcheck="false">
+        <kbd class="search-key" aria-hidden="true">/</kbd>
+        <div id="search-results" class="search-results" role="listbox" hidden></div>
+      </div>
       <p>Contents</p>
       <ol>
         <li><a href="#start">Getting started</a></li>
@@ -580,6 +584,138 @@
     window.addEventListener('scroll', update, { passive: true });
     window.addEventListener('hashchange', update);
     update();
+  })();
+</script>
+<script>
+  // Search the guide: headings, controls, steps and FAQ questions, as you type.
+  (function () {
+    var input = document.getElementById('guide-search');
+    var panel = document.getElementById('search-results');
+    if (!input || !panel) return;
+
+    function chapterOf(el) {
+      var c = el.closest('section.chapter');
+      var h = c && c.querySelector('h2');
+      return h ? h.textContent.trim() : '';
+    }
+    function clean(t) { return t.replace(/\s+/g, ' ').trim(); }
+
+    // What can be found, each pointing at the element to show.
+    var items = [];
+    document.querySelectorAll('article h2, article h3').forEach(function (h) {
+      items.push({ title: clean(h.textContent), text: '', el: h, chapter: chapterOf(h), weight: h.tagName === 'H2' ? 3 : 2 });
+    });
+    document.querySelectorAll('article .defs > div:nth-child(odd)').forEach(function (term) {
+      var desc = term.nextElementSibling;
+      items.push({ title: clean(term.textContent), text: desc ? clean(desc.textContent) : '', el: term, chapter: chapterOf(term), weight: 1 });
+    });
+    document.querySelectorAll('article details').forEach(function (d) {
+      var q = d.querySelector('summary'), a = d.querySelector('p');
+      items.push({ title: clean(q ? q.textContent : ''), text: a ? clean(a.textContent) : '', el: d, chapter: 'Help & FAQ', weight: 1 });
+    });
+    document.querySelectorAll('article p, article li, article figcaption, article .note').forEach(function (el) {
+      if (el.closest('.defs') || el.closest('details')) return;
+      var h = null, n = el;
+      // The nearest heading above names the result.
+      while (n && !h) { n = n.previousElementSibling || n.parentElement; if (n && /^H[23]$/.test(n.tagName)) h = n; if (n && n.tagName === 'ARTICLE') break; }
+      items.push({ title: h ? clean(h.textContent) : chapterOf(el), text: clean(el.textContent), el: el, chapter: chapterOf(el), weight: 0 });
+    });
+
+    function escapeHTML(t) { return t.replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+    function mark(t, words) {
+      var out = escapeHTML(t);
+      words.forEach(function (w) {
+        out = out.replace(new RegExp('(' + w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'ig'), '<mark>$1</mark>');
+      });
+      return out;
+    }
+    function snippet(t, word) {
+      if (!t) return '';
+      var i = t.toLowerCase().indexOf(word);
+      if (i < 0 || t.length < 120) return t.slice(0, 120) + (t.length > 120 ? '…' : '');
+      var start = Math.max(0, i - 40);
+      return (start > 0 ? '…' : '') + t.slice(start, start + 120) + (start + 120 < t.length ? '…' : '');
+    }
+
+    var results = [], active = 0;
+    function search(q) {
+      var words = q.toLowerCase().split(/\s+/).filter(function (w) { return w.length > 0; });
+      if (!words.length || q.trim().length < 2) { close(); return; }
+      var seen = new Set();
+      results = items.map(function (it) {
+        var title = it.title.toLowerCase(), body = it.text.toLowerCase();
+        if (!words.every(function (w) { return title.indexOf(w) >= 0 || body.indexOf(w) >= 0; })) return null;
+        var score = it.weight * 10 + words.filter(function (w) { return title.indexOf(w) >= 0; }).length * 20
+          + (title.indexOf(q.toLowerCase().trim()) === 0 ? 30 : 0);
+        return { it: it, score: score };
+      }).filter(Boolean).sort(function (a, b) { return b.score - a.score; })
+        .filter(function (r) { var k = r.it.title + '|' + r.it.chapter; if (seen.has(k) && !r.it.text) return false; seen.add(k); return true; })
+        .slice(0, 8);
+      active = 0;
+      render(words);
+    }
+    function render(words) {
+      if (!results.length) {
+        panel.innerHTML = '<div class="search-empty">No matches. Try another word, or <a href="#faq">Help &amp; FAQ</a>.</div>';
+        panel.hidden = false;
+        return;
+      }
+      panel.innerHTML = results.map(function (r, i) {
+        var it = r.it;
+        return '<a href="#" role="option" class="search-hit' + (i === active ? ' active' : '') + '" data-i="' + i + '">'
+          + '<span class="hit-chapter">' + escapeHTML(it.chapter) + '</span>'
+          + '<span class="hit-title">' + mark(it.title, words) + '</span>'
+          + (it.text ? '<span class="hit-text">' + mark(snippet(it.text, words[0]), words) + '</span>' : '')
+          + '</a>';
+      }).join('');
+      panel.hidden = false;
+    }
+    function close() { panel.hidden = true; panel.innerHTML = ''; results = []; }
+    function go(i) {
+      var r = results[i];
+      if (!r) return;
+      var el = r.it.el;
+      if (el.tagName === 'DETAILS') el.open = true;
+      close();
+      input.blur();
+      el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      var target = el.closest('.defs') ? el : el;
+      target.classList.remove('found');
+      void target.offsetWidth;
+      target.classList.add('found');
+      if (el.nextElementSibling && el.parentElement.classList.contains('defs')) {
+        el.nextElementSibling.classList.remove('found'); void el.offsetWidth; el.nextElementSibling.classList.add('found');
+      }
+    }
+
+    input.addEventListener('input', function () { search(input.value); });
+    input.addEventListener('focus', function () { if (input.value) search(input.value); });
+    input.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+        if (!results.length) return;
+        e.preventDefault();
+        active = (active + (e.key === 'ArrowDown' ? 1 : results.length - 1)) % results.length;
+        panel.querySelectorAll('.search-hit').forEach(function (a, i) { a.classList.toggle('active', i === active); });
+      } else if (e.key === 'Enter') {
+        e.preventDefault(); go(active);
+      } else if (e.key === 'Escape') {
+        input.value = ''; close(); input.blur();
+      }
+    });
+    panel.addEventListener('mousedown', function (e) {
+      var a = e.target.closest('.search-hit');
+      if (!a) return;
+      e.preventDefault();
+      go(+a.getAttribute('data-i'));
+    });
+    document.addEventListener('click', function (e) { if (!e.target.closest('.search')) close(); });
+    // "/" or ⌘K jumps to the search box.
+    document.addEventListener('keydown', function (e) {
+      var typing = /INPUT|TEXTAREA/.test(document.activeElement.tagName);
+      if ((e.key === '/' && !typing) || (e.key.toLowerCase() === 'k' && (e.metaKey || e.ctrlKey))) {
+        e.preventDefault(); input.focus(); input.select();
+      }
+    });
   })();
 </script>
 </body>
