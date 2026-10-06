@@ -45,6 +45,7 @@
             <li><a href="#templates">Templates</a></li>
             <li><a href="#brand">Brand</a></li>
             <li><a href="#follow-brand">How the Brand works</a></li>
+            <li><a href="#link-app">Linking your App Store app</a></li>
           </ol>
         </li>
         <li><a href="#stage">Stage</a></li>
@@ -197,6 +198,7 @@
             <p>The look of your whole project, set once. Every screen that follows the Brand updates as you change it.</p>
             <div class="defs">
               <div>Brand card</div><div>Your brand's name. The <span class="ui">⋯</span> button applies a saved brand, saves the current one for other projects, or deletes saved ones.</div>
+              <div>App Store App</div><div>Link the project to your app on the App Store. See <a href="#link-app">Linking your App Store app</a>.</div>
               <div>Headline</div><div>Font, weight, color, tracking, leading, case (As Typed or All Caps) and <span class="ui">Warp</span> (Bulge, Pinch, Arch or Wave, with an amount). <span class="ui">Smaller</span> / <span class="ui">Larger</span> resize headlines.</div>
               <div>Supporting Text</div><div>Font, weight, color and leading for the smaller line under the headline, plus <span class="ui">Smaller</span> / <span class="ui">Larger</span>.</div>
               <div>Layout</div><div>Text alignment, the margin around each screen, and Tone (Light or Dark).</div>
@@ -226,6 +228,24 @@
           <div>Reattach</div><div>Right-click it again and choose <span class="ui">Reattach to Brand</span>. It picks up the current Brand style.</div>
           <div>Templates and your Brand</div><div>If you've customized the Brand, choosing a new template asks whether to <span class="ui">Keep My Brand</span> (only the layout changes) or <span class="ui">Use Template Look</span>. Screens you styled by hand and detached items are kept either way.</div>
         </div>
+
+        <h3 id="link-app">Linking your App Store app</h3>
+        <p>If your app is already on the App Store, link it and the project becomes that app. In <span class="ui">Backstage › Brand › App Store App</span>, click <span class="ui">Link App Store App</span>, then paste your app's App Store link or search for it by name.</p>
+        <p>Before anything changes, PreviewStage asks. When you click <span class="ui">Link and Replace Screens</span>, in one step:</p>
+        <ul>
+          <li>The project takes your app's <strong>name</strong>.</li>
+          <li>Your app's <strong>icon</strong> is saved, and becomes the Brand logo if you haven't set one.</li>
+          <li>Your <strong>live App Store screenshots</strong> become your screens, one each, at full size. (If there are none for your project's device, your screens stay.)</li>
+          <li>Preview Mode shows your real ratings, price, age rating, category, developer, languages, size and description, and lets you <a href="#preview">compare your design with what's live</a>.</li>
+        </ul>
+        <p>One <kbd>⌘Z</kbd> undoes it all. Your Header and Search Results images are never touched.</p>
+        <div class="defs">
+          <div>Refresh from the App Store</div><div>Reads your listing again: new ratings, version, description or name. Your screens are left alone.</div>
+          <div>View on the App Store</div><div>Opens your app's page in your browser.</div>
+          <div>Link a Different App…</div><div>Links another app, with the same confirmation.</div>
+          <div>Unlink</div><div>Goes back to placeholder details. Your screens stay as they are.</div>
+        </div>
+        <div class="note"><strong>Only your public listing is read</strong>Linking reads the same public information anyone sees on the App Store, using Apple's lookup. There's no account to sign in to, and nothing is uploaded. It works for apps that are already live.</div>
       </section>
 
       <!-- 5 -->
@@ -419,7 +439,10 @@
           <div>Focus</div><div>One screenshot at a time, full size. Use the arrow buttons, <kbd>←</kbd> <kbd>→</kbd> or <kbd>Space</kbd>.</div>
         </div>
         <figure class="figure"><img width="2000" height="1250" class="shot window" src="images/preview-search.jpg?v=5" alt="Preview Mode showing App Store search with a Search Results image" loading="lazy"><figcaption>Search on iPhone, with the Search Results image.</figcaption></figure>
-        <p>A brand-new app has no ratings yet, so none are shown. Screens with an empty device are left out, and a note tells you which ones. Press <kbd>Esc</kbd> or close the window to return to the editor.</p>
+        <div class="defs">
+          <div>Your Design / Live Now</div><div>With a <a href="#link-app">linked app</a>, this switch at the top right shows the screenshots on the App Store today on the same page, so you can compare them with your new design.</div>
+        </div>
+        <p>A brand-new app has no ratings yet, so none are shown; a linked app shows its real ratings and details. Screens with an empty device are left out, and a note tells you which ones. Press <kbd>Esc</kbd> or close the window to return to the editor.</p>
       </section>
 
       <!-- 12 -->
@@ -504,6 +527,9 @@
         <details><summary>Why don't I see Creative Assets in my project?</summary><p>They're for iPhone and iPad App Store projects. Mac, Apple Watch, Apple TV, Vision Pro and social media projects don't have them, because the App Store doesn't use them there.</p></details>
         <details><summary>Image Playground is greyed out.</summary><p>It needs Apple Intelligence. Turn it on in System Settings › Apple Intelligence &amp; Siri, on a Mac that supports it.</p></details>
         <details><summary>Where are the ChatGPT styles in Image Playground?</summary><p>They're off by default because they send your description to OpenAI. Turn on <span class="ui">Include ChatGPT styles</span> in PreviewStage ▸ Settings, after setting up ChatGPT in System Settings › Apple Intelligence &amp; Siri.</p></details>
+        <details><summary>Linking my app replaced my screens. How do I get them back?</summary><p>Press <kbd>⌘Z</kbd> once: the name, logo and screens all go back to how they were. PreviewStage always asks before linking replaces anything.</p></details>
+        <details><summary>Why can't I find my app when linking?</summary><p>Linking works for apps that are live on the App Store. Search looks in your Mac's App Store country and for your project's kind of device; pasting your app's App Store link always finds it.</p></details>
+        <details><summary>Why doesn't a linked app show my subtitle?</summary><p>Apple's public listing doesn't include an app's subtitle, so PreviewStage uses your first screen's headline in its place.</p></details>
         <details><summary>Where are my projects saved?</summary><p>On your Mac, automatically, as you work. Open them any time from Home (<kbd>⇧⌘0</kbd>).</p></details>
         <div class="note" style="margin-top:22px"><strong>Still need help?</strong>Email <a href="mailto:gaudino.software@gmail.com">gaudino.software@gmail.com</a>. A screenshot of what you see helps a lot.</div>
       </section>
