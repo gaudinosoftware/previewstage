@@ -276,7 +276,8 @@ footer.site .spacer { margin-left: auto; }
 .names .card h3 { margin: 4px 0 6px; font-size: 18px; }
 .names .tag { font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); }
 @media (max-width: 640px) { .names { grid-template-columns: 1fr; } }
-.hero-shot { margin: 8px 0 0; }
+/* Room below the main screenshot before the next section's line. */
+.hero-shot { margin: 8px 0 64px; }
 .split .defs { grid-template-columns: minmax(96px, 132px) 1fr; }
 @media (max-width: 560px) { .split .defs { grid-template-columns: 1fr; } }
 
