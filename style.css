@@ -326,3 +326,6 @@ footer.site .spacer { margin-left: auto; }
 .includes li { break-inside: avoid; }
 @media (max-width: 560px) { .includes { columns: 1; } }
 .fine { font-size: 13px; color: var(--ink-3); }
+
+/* "Made with ❤️ in Alexandria, Virginia", on its own line under the links. */
+footer.site .made { flex-basis: 100%; margin: 10px 0 0; font-size: 13px; color: var(--ink-3); text-align: center; }
