@@ -93,6 +93,7 @@
           <li>Choose your <strong>Devices</strong>: iPhone, iPad, Mac, Apple Watch, Vision Pro or Apple TV. For social media you can also choose <span class="ui">No Device</span>.</li>
           <li>Pick a <strong>Size</strong>. The recommended App Store size is marked; other sizes are adapted for you when you export. Use the Portrait / Landscape switch where it applies.</li>
           <li>Under <strong>Start</strong>, choose <span class="ui">Start Blank</span> or <span class="ui">Choose a Style</span> to pick a template.</li>
+          <li>Optionally, link your app if it's already on the App Store: paste its link or search for it, and the project starts with its name, icon and details, with its live screenshots in Assets. See <a href="#link-app">Linking your App Store app</a>.</li>
           <li>Name your project and click <span class="ui">Create</span>.</li>
         </ol>
 
@@ -181,7 +182,7 @@
           <div class="text">
             <h3>Assets</h3>
             <p>Every image in the project. Drop screenshots anywhere in the window, or click <span class="ui">Import Screenshots…</span> (<kbd>⇧⌘I</kbd>). <span class="ui">Replace All…</span> swaps every screenshot in one step.</p>
-            <p>Right-click an image to <span class="ui">Use in Selected Device</span>, <span class="ui">Insert as Image</span>, <span class="ui">Use as Screen Background</span>, <span class="ui">Set as Brand Logo</span>, or remove it from the project.</p>
+            <p>Right-click an image to <span class="ui">Preview</span> it in its own window, shaped like the picture and sized to fit your screen, or to <span class="ui">Use in Selected Device</span>, <span class="ui">Insert as Image</span>, <span class="ui">Use as Screen Background</span>, <span class="ui">Set as Brand Logo</span>, or remove it from the project.</p>
           </div>
         </div>
 
@@ -234,12 +235,12 @@
         </div>
 
         <h3 id="link-app">Linking your App Store app</h3>
-        <p>If your app is already on the App Store, link it and the project becomes that app. In <span class="ui">Backstage › Brand › App Store App</span>, click <span class="ui">Link App Store App</span>, then paste your app's App Store link or search for it by name.</p>
-        <p>Before anything changes, PreviewStage asks. When you click <span class="ui">Link and Replace Screens</span>, in one step:</p>
+        <p>If your app is already on the App Store, link it and the project takes on that app's details. In <span class="ui">Backstage › Brand › App Store App</span>, click <span class="ui">Link App Store App</span>, then paste your app's App Store link or search for it by name.</p>
+        <p>Before anything changes, PreviewStage asks. When you click <span class="ui">Link App</span>, in one step:</p>
         <ul>
           <li>The project takes your app's <strong>name</strong>.</li>
           <li>Your app's <strong>icon</strong> is saved, and becomes the Brand logo if you haven't set one.</li>
-          <li>Your <strong>live App Store screenshots</strong> become your screens, one each, at full size. (If there are none for your project's device, your screens stay.)</li>
+          <li>Your <strong>live App Store screenshots</strong> are downloaded at full size and added to <a href="#assets">Assets</a>, ready to drop into any device. Your screens stay as they are.</li>
           <li>Preview Mode shows your real ratings, price, age rating, category, developer, languages, size and description, and lets you <a href="#preview">compare your design with what's live</a>.</li>
         </ul>
         <p>One <kbd>⌘Z</kbd> undoes it all. Your Header and Search Results images are never touched.</p>
@@ -531,7 +532,7 @@
         <details><summary>Why don't I see Creative Assets in my project?</summary><p>They're for iPhone and iPad App Store projects. Mac, Apple Watch, Apple TV, Vision Pro and social media projects don't have them, because the App Store doesn't use them there.</p></details>
         <details><summary>Image Playground is greyed out.</summary><p>It needs Apple Intelligence. Turn it on in System Settings › Apple Intelligence &amp; Siri, on a Mac that supports it.</p></details>
         <details><summary>Where are the ChatGPT styles in Image Playground?</summary><p>They're off by default because they send your description to OpenAI. Turn on <span class="ui">Include ChatGPT styles</span> in PreviewStage ▸ Settings, after setting up ChatGPT in System Settings › Apple Intelligence &amp; Siri.</p></details>
-        <details><summary>Linking my app replaced my screens. How do I get them back?</summary><p>Press <kbd>⌘Z</kbd> once: the name, logo and screens all go back to how they were. PreviewStage always asks before linking replaces anything.</p></details>
+        <details><summary>Where are my live screenshots after linking?</summary><p>In Backstage › Assets, named after your app (for example <em>My App Live 01</em>, <em>My App Live 02</em>). Linking never changes your screens: drag a screenshot onto a device, or right-click it and choose <span class="ui">Use in Selected Device</span>. Press <kbd>⌘Z</kbd> once to undo the whole link.</p></details>
         <details><summary>Why can't I find my app when linking?</summary><p>Linking works for apps that are live on the App Store. Search looks in your Mac's App Store country and for your project's kind of device; pasting your app's App Store link always finds it.</p></details>
         <details><summary>Why doesn't a linked app show my subtitle?</summary><p>Apple's public listing doesn't include an app's subtitle, so PreviewStage uses your first screen's headline in its place.</p></details>
         <details><summary>Where are my projects saved?</summary><p>On your Mac, automatically, as you work. Open them any time from Home (<kbd>⇧⌘0</kbd>).</p></details>
