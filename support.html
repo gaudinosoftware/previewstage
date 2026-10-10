@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>PreviewStage User Guide</title>
-<meta name="description" content="How to use PreviewStage: Backstage, the Stage, the Inspector, iOS 27 Header and Search Results assets, Image Playground, device frames, Preview Mode, exporting and keyboard shortcuts.">
+<meta name="description" content="How to use PreviewStage: Backstage, the Stage, the Inspector, capturing from the Simulator, Trailers (App Store and social videos), iOS 27 Header and Search Results assets, Image Playground, device frames, Preview Mode, exporting, uploading to App Store Connect and keyboard shortcuts.">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png?v=7">
 <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png?v=7">
 <link rel="shortcut icon" href="favicon.ico?v=7">
@@ -27,7 +27,7 @@
   <div class="hero" style="padding-bottom:8px">
     <p class="eyebrow">Support</p>
     <h1>User Guide</h1>
-    <p class="lede">Everything in PreviewStage, from your first project to exporting every App Store size. Questions or ideas? Write to <a href="mailto:gaudino.software@gmail.com">gaudino.software@gmail.com</a>.</p>
+    <p class="lede">Everything in PreviewStage, from your first project to exporting every size and uploading straight to App Store Connect. Questions or ideas? Write to <a href="mailto:gaudino.software@gmail.com">gaudino.software@gmail.com</a>.</p>
   </div>
 
   <div class="guide">
@@ -44,7 +44,8 @@
         <li><a href="#toolbar">Toolbar</a></li>
         <li><a href="#backstage">Backstage</a>
           <ol>
-            <li><a href="#screens">Screens</a></li>
+            <li><a href="#screens">Scenes</a></li>
+            <li><a href="#trailers-tab">Trailers</a></li>
             <li><a href="#assets">Assets</a></li>
             <li><a href="#templates">Templates</a></li>
             <li><a href="#brand">Brand</a></li>
@@ -53,9 +54,10 @@
           </ol>
         </li>
         <li><a href="#stage">Stage</a></li>
+        <li><a href="#capture">Capture from Simulator</a></li>
         <li><a href="#inspector">Inspector</a>
           <ol>
-            <li><a href="#inspector-screen">Screen &amp; project</a></li>
+            <li><a href="#inspector-screen">Scene &amp; project</a></li>
             <li><a href="#inspector-layer">A selected layer</a></li>
             <li><a href="#inspector-multi">Several layers</a></li>
           </ol>
@@ -67,11 +69,19 @@
             <li><a href="#creative-templates">Templates</a></li>
           </ol>
         </li>
+        <li><a href="#trailers">Trailers</a>
+          <ol>
+            <li><a href="#trailers-record">Recording takes</a></li>
+            <li><a href="#trailers-edit">Editing</a></li>
+            <li><a href="#trailers-social">Social media videos</a></li>
+          </ol>
+        </li>
         <li><a href="#playground">Image Playground</a></li>
         <li><a href="#devices">Device frames</a></li>
         <li><a href="#library">Device Library</a></li>
         <li><a href="#preview">Preview Mode</a></li>
         <li><a href="#export">Exporting</a></li>
+        <li><a href="#upload">Uploading to App Store Connect</a></li>
         <li><a href="#shortcuts">Keyboard shortcuts</a></li>
         <li><a href="#faq">Help &amp; FAQ</a></li>
       </ol>
@@ -79,29 +89,30 @@
 
     <article>
 
-      <!-- 1 -->
       <section class="chapter" id="start">
         <span class="num">Chapter 1</span>
         <h2>Getting started</h2>
         <p>When you open PreviewStage you see <span class="ui">Home</span>: your recent projects and every template. From here you can start a new project, open one you've made, or open the <span class="ui">Device Library</span> with the round button in the bottom-right corner.</p>
-        <figure class="figure"><img width="1800" height="1246" class="shot window" src="images/home.jpg?v=5" alt="PreviewStage Home with templates" loading="lazy"><figcaption>Home: start a new project, or begin from any template.</figcaption></figure>
+        <figure class="figure"><img width="1800" height="1246" class="shot window" src="images/home.jpg?v=6" alt="PreviewStage Home with templates" loading="lazy"><figcaption>Home: start a new project, or begin from any template.</figcaption></figure>
 
         <h3>Create a project</h3>
         <ol>
           <li>Click <span class="ui">New Project</span> (<kbd>⌘N</kbd>), or click any template to start with it.</li>
-          <li>Choose a <strong>Platform</strong>: <span class="ui">App Store</span> for listing screenshots, or <span class="ui">Social Media</span> for posts and stories. Website and Press Kit are coming soon.</li>
+          <li>Choose a <strong>Platform</strong>: <span class="ui">App Store</span> for listing screenshots, or <span class="ui">Social Media</span> for posts, stories and videos.</li>
+          <li>For social media, choose the <strong>Network</strong>: Instagram, TikTok, YouTube, Facebook, X, LinkedIn, Threads or Pinterest. Its sizes and video lengths are used throughout the project, and you can change it later in the Inspector.</li>
           <li>Choose your <strong>Devices</strong>: iPhone, iPad, Mac, Apple Watch, Vision Pro or Apple TV. For social media you can also choose <span class="ui">No Device</span>.</li>
-          <li>Pick a <strong>Size</strong>. The recommended App Store size is marked; other sizes are adapted for you when you export. Use the Portrait / Landscape switch where it applies.</li>
+          <li>Pick a <strong>Size</strong> (App Store) or <strong>Format</strong> (social media). The recommended one is marked; for the App Store, other sizes are adapted for you when you export. Use the Portrait / Landscape switch where it applies.</li>
           <li>Under <strong>Start</strong>, choose <span class="ui">Start Blank</span> or <span class="ui">Choose a Style</span> to pick a template.</li>
           <li>Optionally, link your app if it's already on the App Store: paste its link or search for it, and the project starts with its name, icon and details, with its live screenshots in Assets. See <a href="#link-app">Linking your App Store app</a>.</li>
           <li>Name your project and click <span class="ui">Create</span>.</li>
         </ol>
 
+        <figure class="figure" style="max-width:620px"><img width="1440" height="1784" class="shot window" src="images/new-project-social.jpg?v=6" alt="New Project with Social Media and Instagram chosen" loading="lazy"><figcaption>A social media project: pick the network, then its format.</figcaption></figure>
+
         <h3>Manage projects</h3>
         <p>Right-click a project on Home to <span class="ui">Open</span>, <span class="ui">Rename</span>, <span class="ui">Duplicate</span> or <span class="ui">Move to Trash</span>. Projects save automatically as you work.</p>
       </section>
 
-      <!-- 2 -->
       <section class="chapter" id="editor">
         <span class="num">Chapter 2</span>
         <h2>The editor at a glance</h2>
@@ -109,7 +120,7 @@
 
         <figure class="figure">
           <div class="annotated">
-            <img width="2000" height="1250" class="shot window" src="images/editor.jpg?v=5" alt="The PreviewStage editor window" loading="lazy">
+            <img width="2000" height="1250" class="shot window" src="images/editor.jpg?v=6" alt="The PreviewStage editor window" loading="lazy">
             <span class="zone" style="left:21.5%;top:0.6%;width:57%;height:5%"></span>
             <span class="zone" style="left:0.6%;top:6.5%;width:19.4%;height:92.5%"></span>
             <span class="zone" style="left:21%;top:6.5%;width:57.6%;height:92.5%"></span>
@@ -121,117 +132,134 @@
           </div>
           <div class="legend">
             <div><b>1</b><span><strong>Toolbar</strong>: insert things, undo, preview and export.</span></div>
-            <div><b>2</b><span><strong>Backstage</strong>: Screens, Assets, Templates and Brand.</span></div>
-            <div><b>3</b><span><strong>Stage</strong>: your screens, where you design.</span></div>
+            <div><b>2</b><span><strong>Backstage</strong>: Scenes, Trailers, Assets, Templates and Brand.</span></div>
+            <div><b>3</b><span><strong>Stage</strong>: your scenes, where you design.</span></div>
             <div><b>4</b><span><strong>Inspector</strong>: settings for whatever is selected.</span></div>
           </div>
         </figure>
 
         <div class="names">
-          <div class="card"><span class="tag">Left</span><h3>Backstage</h3><p>Prepare your show: screens, images, templates and your brand.</p></div>
+          <div class="card"><span class="tag">Left</span><h3>Backstage</h3><p>Prepare your show: scenes, trailers, images, templates and your brand.</p></div>
           <div class="card"><span class="tag">Center</span><h3>Stage</h3><p>Your screenshots, presented and designed at their real proportions.</p></div>
-          <div class="card"><span class="tag">Right</span><h3>Inspector</h3><p>Inspects every layer, screen and setting so it's just right.</p></div>
+          <div class="card"><span class="tag">Right</span><h3>Inspector</h3><p>Inspects every layer, scene and setting so it's just right.</p></div>
         </div>
 
-        <div class="note"><strong>A simple rule</strong>Select something on the Stage and the Inspector shows its settings. Click an empty spot and the Inspector shows the current screen, the project, and tools that change every screen at once.</div>
+        <div class="note"><strong>A simple rule</strong>Select something on the Stage and the Inspector shows its settings. Click an empty spot and the Inspector shows the current scene, the project, and tools that change every scene at once.</div>
       </section>
 
-      <!-- 3 -->
       <section class="chapter" id="toolbar">
         <span class="num">Chapter 3</span>
         <h2>Toolbar</h2>
         <p>Hover over any button to see its name.</p>
         <div class="defs">
           <div>Backstage</div><div>Shows or hides Backstage on the left (<kbd>⌃⌘S</kbd>).</div>
-          <div>Text (Aa)</div><div>Adds a text layer to the current screen and starts editing it.</div>
+          <div>Text (Aa)</div><div>Adds a text layer to the current scene and starts editing it.</div>
           <div>Device ▾</div><div>Adds a device. <span class="ui">Mock</span> lists the drawn frames (iPhone 18 Pro Max, 18 Pro, 17, Duo, Screen Only and Two Devices Side by Side). <span class="ui">Apple (Downloaded)</span> lists the official Apple bezels you've downloaded. <span class="ui">Other Platforms</span> has iPad, Mac, Apple Watch, Vision Pro and Apple TV, and <span class="ui">Download More…</span> opens the Device Library.</div>
-          <div>Image ▾</div><div><span class="ui">Choose from Your Mac…</span> adds pictures to the current screen. <span class="ui">This Project's Images</span> places one you've already added. <span class="ui">Create with Image Playground…</span> makes a new one with Apple Intelligence (see <a href="#playground">Image Playground</a>).</div>
+          <div>Image ▾</div><div><span class="ui">Choose from Your Mac…</span> adds pictures to the current scene. <span class="ui">This Project's Images</span> places one you've already added. <span class="ui">Create with Image Playground…</span> makes a new one with Apple Intelligence (see <a href="#playground">Image Playground</a>).</div>
           <div>Shapes ▾</div><div>Adds a rectangle, ellipse, capsule, line, glow, triangle or wave, an SF Symbol, or your Brand Logo.</div>
+          <div>Capture</div><div>Takes a screenshot of your app running in the Simulator, or of a Mac app's window, straight into a device (<kbd>⌃⌘C</kbd>). See <a href="#capture">Capture from Simulator</a>.</div>
+          <div>On the Trailers tab</div><div>The insert tools change to <span class="ui">New Trailer</span>, <span class="ui">Add Takes</span> and <span class="ui">Caption</span>. See <a href="#trailers">Trailers</a>.</div>
           <div>Undo / Redo</div><div>Steps back and forward through your changes (<kbd>⌘Z</kbd>, <kbd>⇧⌘Z</kbd>).</div>
           <div>Preview Mode ▶</div><div>Shows your screenshots as customers will see them. See <a href="#preview">Preview Mode</a>.</div>
-          <div>Export ⇪</div><div>Exports your screenshots (<kbd>⌘E</kbd>). See <a href="#export">Exporting</a>.</div>
+          <div>Export ⇪</div><div>Exports your screenshots (<kbd>⌘E</kbd>), or uploads them to App Store Connect. See <a href="#export">Exporting</a> and <a href="#upload">Uploading</a>.</div>
           <div>Inspector</div><div>Shows or hides the Inspector on the right (<kbd>⌥⌘I</kbd>).</div>
         </div>
       </section>
 
-      <!-- 4 -->
       <section class="chapter" id="backstage">
         <span class="num">Chapter 4</span>
         <h2>Backstage</h2>
-        <p>Backstage is the panel on the left. It has four tabs at the top; hover over a tab to see its name.</p>
+        <p>Backstage is the panel on the left. It has five tabs at the top: Scenes, Trailers, Assets, Templates and Brand. The open tab's name shows above its contents; hover over the others to see their names.</p>
 
         <div class="split" id="screens">
-          <div class="media"><img width="580" height="1300" class="shot" src="images/backstage-screens.jpg?v=5" alt="Backstage: Screens tab" loading="lazy"></div>
+          <div class="media"><img width="580" height="1300" class="shot" src="images/backstage-screens.jpg?v=6" alt="Backstage: Scenes tab" loading="lazy"></div>
           <div class="text">
-            <h3>Screens</h3>
-            <p>Your screenshot sequence, in the order it will appear on the App Store, and the layers of the current screen.</p>
+            <h3>Scenes</h3>
+            <p>Your screenshot sequence, in the order it will appear on the App Store, and the layers of the current scene.</p>
             <div class="defs">
-              <div>Screens list</div><div>Each screen with a thumbnail and its headline. Click to show it; double-click to rename. Drag to reorder. Drop screenshots from Finder onto a screen to fill it and the screens after it.</div>
-              <div>+ (Add Screen)</div><div>Adds a new screen that follows your template.</div>
-              <div>All Screens</div><div>Shows every screen side by side, so you can design them together.</div>
+              <div>Scenes list</div><div>Each scene with a thumbnail and its headline. Click to show it; double-click to rename. Drag to reorder. Drop screenshots from Finder onto a scene to fill it and the scenes after it.</div>
+              <div>+ (Add Scene)</div><div>Adds a new scene that follows your template.</div>
+              <div>All Scenes</div><div>Shows every scene side by side, so you can design them together.</div>
               <div>Creative Assets</div><div>For iPhone and iPad projects: the <span class="ui">Header</span> and <span class="ui">Search Results</span> images for iOS 27 App Store pages, or one <span class="ui">Universal</span> image for both. Click one to open it on the Stage. See <a href="#creative">Header &amp; Search Results</a>.</div>
-              <div>Layers</div><div>Everything on the current screen, top layer first, with a short note on what each one is (for example <em>Mock frame · Screenshot</em> or <em>Headline</em>). Click to select; hover to show the lock and eye buttons; drag to change the order. A broken-link icon marks an item detached from the Brand.</div>
-              <div>Across All Screens</div><div>Layers that stretch across several screens, such as a panorama background or a spanning device.</div>
+              <div>Layers</div><div>Everything on the current scene, top layer first, with a short note on what each one is (for example <em>Mock frame · Screenshot</em> or <em>Headline</em>). Click to select; hover to show the lock and eye buttons; drag to change the order. A broken-link icon marks an item detached from the Brand.</div>
+              <div>Across All Scenes</div><div>Layers that stretch across several scenes, such as a panorama background or a spanning device.</div>
             </div>
-            <p>Right-click a screen to rename, duplicate or delete it, or to apply its layout to every screen.</p>
+            <p>Right-click a scene to rename, duplicate or delete it, or to apply its layout to every scene.</p>
           </div>
         </div>
 
-        <div class="split reverse" id="assets">
-          <div class="media"><img width="580" height="1300" class="shot" src="images/backstage-assets.jpg?v=5" alt="Backstage: Assets tab" loading="lazy"></div>
+        <div class="split reverse" id="trailers-tab">
+          <div class="media"><img width="580" height="1300" class="shot" src="images/backstage-trailers.jpg?v=6" alt="Backstage: Trailers tab" loading="lazy"></div>
+          <div class="text">
+            <h3>Trailers</h3>
+            <p>Your App Store videos (Apple calls them App Previews), or videos for your social network.</p>
+            <div class="defs">
+              <div>Trailers list</div><div>Each trailer with its poster frame, length and number of takes. Click one to open it on the Stage; right-click to delete it. App Store projects can have three, as Apple allows.</div>
+              <div>+ (New Trailer)</div><div>Starts a new, empty trailer.</div>
+              <div>Record</div><div>Every Simulator that's running shows here with a <span class="ui">Record</span> button. If none is running, it tells you how to start one. See <a href="#trailers-record">Recording takes</a>.</div>
+              <div>Import Takes…</div><div>Adds screen recordings you already have.</div>
+              <div>Apple's Rules / Tips</div><div>For the App Store, Apple's rules for App Previews. For social media, tips for your network.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="split" id="assets">
+          <div class="media"><img width="580" height="1300" class="shot" src="images/backstage-assets.jpg?v=6" alt="Backstage: Assets tab" loading="lazy"></div>
           <div class="text">
             <h3>Assets</h3>
-            <p>Every image in the project. Drop screenshots anywhere in the window, or click <span class="ui">Import Screenshots…</span> (<kbd>⇧⌘I</kbd>). <span class="ui">Replace All…</span> swaps every screenshot in one step.</p>
-            <p>Right-click an image to <span class="ui">Preview</span> it in its own window, shaped like the picture and sized to fit your screen, or to <span class="ui">Use in Selected Device</span>, <span class="ui">Insert as Image</span>, <span class="ui">Use as Screen Background</span>, <span class="ui">Set as Brand Logo</span>, or remove it from the project.</p>
+            <p>Every image in the project. Drop screenshots anywhere in the window, click <span class="ui">+</span> next to the title, or click <span class="ui">Import Screenshots…</span> (<kbd>⇧⌘I</kbd>). <span class="ui">Replace All…</span> swaps every screenshot in one step.</p>
+            <p>Right-click an image to <span class="ui">Preview</span> it in its own window, shaped like the picture and sized to fit your screen, or to <span class="ui">Use in Selected Device</span>, <span class="ui">Insert as Image</span>, <span class="ui">Use as Scene Background</span>, <span class="ui">Set as Brand Logo</span>, or remove it from the project.</p>
+            <p><strong>Reuse the words in a screenshot.</strong> In the Preview window, right-click any text in the picture and choose <span class="ui">Add to Scene 1</span> (your current scene): it's added as a text layer with the same words, size, font weight and color. <span class="ui">Copy Text</span> copies just the words.</p>
           </div>
         </div>
 
-        <div class="split" id="templates">
-          <div class="media"><img width="580" height="1500" class="shot" src="images/backstage-templates.jpg?v=5" alt="Backstage: Templates tab" loading="lazy"></div>
+        <div class="split reverse" id="templates">
+          <div class="media"><img width="580" height="1500" class="shot" src="images/backstage-templates.jpg?v=6" alt="Backstage: Templates tab" loading="lazy"></div>
           <div class="text">
             <h3>Templates</h3>
             <p>23 art-directed styles, each previewed with your own headlines and screenshots: Centered Device, Side by Side, Oversized Type, Edge Crop, Floating, Stacked Devices, Split, Cinematic Dark, Minimal White, Editorial, Full-Bleed Screenshot, Typography First, Continuous Panorama, Spotlight, Hero Zoom, Rise, Color Block, Poster, Award, Big Number, Diagonal, Aurora and Noir.</p>
-            <p>Click a template to apply it to every screen. Right-click to apply only its layout to the current screen. Your text and screenshots stay in place.</p>
+            <p>Click a template to apply it to every scene. Right-click to apply only its layout to the current scene. Your text and screenshots stay in place.</p>
             <p>While a Header or Search Results image is open, this tab shows <a href="#creative-templates">templates made for it</a> instead.</p>
           </div>
         </div>
 
-        <div class="split reverse" id="brand">
-          <div class="media"><img width="580" height="1500" class="shot" src="images/backstage-brand.jpg?v=5" alt="Backstage: Brand tab, typography and layout" loading="lazy"></div>
+        <div class="split" id="brand">
+          <div class="media"><img width="580" height="1500" class="shot" src="images/backstage-brand.jpg?v=6" alt="Backstage: Brand tab, typography and layout" loading="lazy"></div>
           <div class="text">
             <h3>Brand</h3>
-            <p>The look of your whole project, set once. Every screen that follows the Brand updates as you change it.</p>
+            <p>The look of your whole project, set once. Every scene that follows the Brand updates as you change it.</p>
             <div class="defs">
               <div>Brand card</div><div>Your brand's name. The <span class="ui">⋯</span> button applies a saved brand, saves the current one for other projects, or deletes saved ones.</div>
               <div>App Store App</div><div>Link the project to your app on the App Store. See <a href="#link-app">Linking your App Store app</a>.</div>
               <div>Headline</div><div>Font, weight, color, tracking, leading, case (As Typed or All Caps) and <span class="ui">Warp</span> (Bulge, Pinch, Arch or Wave, with an amount). <span class="ui">Smaller</span> / <span class="ui">Larger</span> resize headlines.</div>
               <div>Supporting Text</div><div>Font, weight, color and leading for the smaller line under the headline, plus <span class="ui">Smaller</span> / <span class="ui">Larger</span>.</div>
-              <div>Layout</div><div>Text alignment, the margin around each screen, and Tone (Light or Dark).</div>
-              <div>Background</div><div>Solid, Linear, Radial or Image, with presets. <span class="ui">Continue across all screens</span> makes one background flow behind every screen, like a panorama.</div>
+              <div>Layout</div><div>Text alignment, the margin around each scene, and Tone (Light or Dark).</div>
+              <div>Background</div><div>Solid, Linear, Radial or Image, with presets. <span class="ui">Continue across all scenes</span> makes one background flow behind every scene, like a panorama.</div>
             </div>
           </div>
         </div>
 
-        <div class="split">
-          <div class="media"><img width="580" height="1500" class="shot" src="images/backstage-brand-2.jpg?v=5" alt="Backstage: Brand tab, devices and logo" loading="lazy"></div>
+        <div class="split reverse">
+          <div class="media"><img width="580" height="1500" class="shot" src="images/backstage-brand-2.jpg?v=6" alt="Backstage: Brand tab, devices and logo" loading="lazy"></div>
           <div class="text">
             <div class="defs">
               <div>Devices</div><div>The Brand device: <span class="ui">Frame</span> (Official or Mock), <span class="ui">Device</span> and <span class="ui">Color</span>, plus <span class="ui">Pose</span> and <span class="ui">Shadow</span> for mock frames (<em>As Placed</em> leaves each device as it is). Every device on screens that follow the Brand uses it. <span class="ui">Device Library</span> downloads more Apple devices.</div>
-              <div>Logo</div><div>Drop your app icon or logo onto the empty slot, or click it to choose a file. Then <span class="ui">Place on Screen</span>, <span class="ui">Replace…</span> or <span class="ui">Remove</span>.</div>
-              <div>Apply Everywhere</div><div><span class="ui">Follow Brand on All Screens</span> turns Follow Brand back on for every screen you styled by hand.</div>
+              <div>Logo</div><div>Drop your app icon or logo onto the empty slot, or click it to choose a file. Then <span class="ui">Place on Scene</span>, <span class="ui">Replace…</span> or <span class="ui">Remove</span>.</div>
+              <div>Apply Everywhere</div><div><span class="ui">Follow Brand on All Scenes</span> turns Follow Brand back on for every scene you styled by hand.</div>
             </div>
-            <div class="note"><strong>Changes apply straight away</strong>There's nothing to refresh. A short note at the bottom of the Stage tells you how many screens updated, and which items were left alone.</div>
+            <div class="note"><strong>Changes apply straight away</strong>There's nothing to refresh. A short note at the bottom of the Stage tells you how many scenes updated, and which items were left alone.</div>
           </div>
         </div>
 
         <h3 id="follow-brand">How the Brand works</h3>
-        <p>Each screen has a <span class="ui">Follow Brand</span> switch in its Screen Settings. While it's on, that screen's background, headline and subheadline style, and devices all come from the Brand, and those controls are locked in the Inspector with a <span class="ui">Set by Brand</span> note.</p>
+        <p>Each scene has a <span class="ui">Follow Brand</span> switch in its Scene Settings. While it's on, that scene's background, headline and subheadline style, and devices all come from the Brand, and those controls are locked in the Inspector with a <span class="ui">Set by Brand</span> note.</p>
         <div class="defs">
-          <div>Follow Brand on</div><div>The screen updates whenever the Brand changes.</div>
-          <div>Follow Brand off</div><div>The screen keeps its current look, and everything on it can be styled by hand. Brand changes leave it alone.</div>
-          <div>Detach one item</div><div>Right-click a headline, subheadline or device on the Stage and choose <span class="ui">Detach from Brand</span>, or click <span class="ui">Detach</span> in its <span class="ui">Set by Brand</span> note in the Inspector. Only that item stops following; the rest of the screen still does. In Layers it shows a broken-link icon and <em>Detached</em>.</div>
+          <div>Follow Brand on</div><div>The scene updates whenever the Brand changes.</div>
+          <div>Follow Brand off</div><div>The scene keeps its current look, and everything on it can be styled by hand. Brand changes leave it alone.</div>
+          <div>Detach one item</div><div>Right-click a headline, subheadline or device on the Stage and choose <span class="ui">Detach from Brand</span>, or click <span class="ui">Detach</span> in its <span class="ui">Set by Brand</span> note in the Inspector. Only that item stops following; the rest of the scene still does. In Layers it shows a broken-link icon and <em>Detached</em>.</div>
           <div>Reattach</div><div>Right-click it again and choose <span class="ui">Reattach to Brand</span>. It picks up the current Brand style.</div>
-          <div>Templates and your Brand</div><div>If you've customized the Brand, choosing a new template asks whether to <span class="ui">Keep My Brand</span> (only the layout changes) or <span class="ui">Use Template Look</span>. Screens you styled by hand and detached items are kept either way.</div>
+          <div>Link to Brand</div><div>Any text you added yourself can join the Brand too: right-click it and choose <span class="ui">Link to Brand</span>. It becomes a headline or supporting text and takes the Brand's style.</div>
+          <div>Templates and your Brand</div><div>If you've customized the Brand, choosing a new template asks whether to <span class="ui">Keep My Brand</span> (only the layout changes) or <span class="ui">Use Template Look</span>. Scenes you styled by hand and detached items are kept either way.</div>
         </div>
 
         <h3 id="link-app">Linking your App Store app</h3>
@@ -240,28 +268,27 @@
         <ul>
           <li>The project takes your app's <strong>name</strong>.</li>
           <li>Your app's <strong>icon</strong> is saved, and becomes the Brand logo if you haven't set one.</li>
-          <li>Your <strong>live App Store screenshots</strong> are downloaded at full size and added to <a href="#assets">Assets</a>, ready to drop into any device. Your screens stay as they are.</li>
+          <li>Your <strong>live App Store screenshots</strong> are downloaded at full size and added to <a href="#assets">Assets</a>, ready to drop into any device. Your scenes stay as they are.</li>
           <li>Preview Mode shows your real ratings, price, age rating, category, developer, languages, size and description, and lets you <a href="#preview">compare your design with what's live</a>.</li>
         </ul>
         <p>One <kbd>⌘Z</kbd> undoes it all. Your Header and Search Results images are never touched.</p>
         <div class="defs">
-          <div>Refresh from the App Store</div><div>Reads your listing again: new ratings, version, description or name. Your screens are left alone.</div>
+          <div>Refresh from the App Store</div><div>Reads your listing again: new ratings, version, description or name. Your scenes are left alone.</div>
           <div>View on the App Store</div><div>Opens your app's page in your browser.</div>
           <div>Link a Different App…</div><div>Links another app, with the same confirmation.</div>
-          <div>Unlink</div><div>Goes back to placeholder details. Your screens stay as they are.</div>
+          <div>Unlink</div><div>Goes back to placeholder details. Your scenes stay as they are.</div>
         </div>
         <div class="note"><strong>Only your public listing is read</strong>Linking reads the same public information anyone sees on the App Store, using Apple's lookup. There's no account to sign in to, and nothing is uploaded. It works for apps that are already live.</div>
       </section>
 
-      <!-- 5 -->
       <section class="chapter" id="stage">
         <span class="num">Chapter 5</span>
         <h2>Stage</h2>
-        <p>The Stage is the center of the window: your screens at their real proportions. Click to select, drag to move, and drag the handles to resize or rotate. Double-click text to edit it.</p>
+        <p>The Stage is the center of the window: your scenes at their real proportions. Click to select, drag to move, and drag the handles to resize or rotate. Double-click text to edit it.</p>
         <div class="defs">
           <div>Moving around</div><div>Scroll with two fingers to pan; pinch or <kbd>⌘</kbd>-scroll to zoom. Double-tap with two fingers to switch between fitting everything and 100%.</div>
-          <div>Smart guides</div><div>While you drag, a dashed red line marks the center of the screen and turns solid green when your layer is exactly centered. Layers snap to the center, edges and other layers. Turn guides on or off with the ruler button or <kbd>⌘;</kbd>.</div>
-          <div>Stage controls</div><div>At the bottom: zoom out, zoom level, zoom in, Zoom to Fit, Guides, and Panorama View (screens joined edge to edge, for designs that flow across them).</div>
+          <div>Smart guides</div><div>While you drag, a dashed red line marks the center of the scene and turns solid green when your layer is exactly centered. Layers snap to the center, edges and other layers. Turn guides on or off with the ruler button or <kbd>⌘;</kbd>.</div>
+          <div>Stage controls</div><div>At the bottom: zoom out, zoom level, zoom in, Zoom to Fit, Guides, and Panorama View (scenes joined edge to edge, for designs that flow across them).</div>
           <div>Adding screenshots</div><div>Drop images straight onto a device. An empty device shows <span class="ui">Drop a screenshot</span> with a <span class="ui">Choose…</span> button.</div>
           <div>Apple's guidelines card</div><div>If a device with an official Apple bezel is rotated, tilted, cropped, shadowed or covered, a card appears in the top-right corner of the Stage explaining what Apple asks for. Click <span class="ui">Straighten</span> to fix it, or <span class="ui">Use Mock</span> to switch to a mock frame. Hidden devices don't count.</div>
           <div>Right-click</div><div>Cut, copy, duplicate, arrange and span layers. Devices also offer <span class="ui">Add</span>, <span class="ui">Replace</span> or <span class="ui">Remove Screenshot</span>. Items that follow the Brand offer <span class="ui">Detach from Brand</span>. With several layers selected, the menu acts on all of them, including detaching or reattaching them in one step.</div>
@@ -271,34 +298,50 @@
         </div>
       </section>
 
-      <!-- 6 -->
-      <section class="chapter" id="inspector">
+      <section class="chapter" id="capture">
         <span class="num">Chapter 6</span>
+        <h2>Capture from Simulator</h2>
+        <p>Take screenshots of your app straight from Xcode's Simulator, into the right device, without saving files. Click <span class="ui">Capture</span> in the toolbar (<kbd>⌃⌘C</kbd>).</p>
+        <figure class="figure" style="max-width:520px"><img width="784" height="432" class="shot" src="images/capture.jpg?v=6" alt="Capture from Simulator" loading="lazy"><figcaption>Every running Simulator, ready to capture.</figcaption></figure>
+        <ol>
+          <li>Run your app from Xcode (<kbd>⌘R</kbd>) and go to the screen you want.</li>
+          <li>In PreviewStage, click <span class="ui">Capture</span> next to the Simulator. The screenshot goes into the device on the scene shown under <span class="ui">Into</span>.</li>
+          <li>Go to your app's next screen and capture again. With <span class="ui">Move to the next scene after each capture</span> on, each one fills the next scene.</li>
+        </ol>
+        <div class="defs">
+          <div>Clean status bar</div><div>Shows 9:41, full battery and full signal while capturing, like Apple's own screenshots. The Simulator goes back to normal afterwards.</div>
+          <div>The right device</div><div>Each Simulator is matched to its device (iPhone, iPad, Apple Watch, Vision Pro or Apple TV), and the scene's device changes to match when it doesn't.</div>
+          <div>Mac apps</div><div>In Mac projects, Capture lists your Mac's open windows instead. macOS asks once for Screen Recording permission, and only the window you choose is captured.</div>
+        </div>
+      </section>
+
+      <section class="chapter" id="inspector">
+        <span class="num">Chapter 7</span>
         <h2>Inspector</h2>
         <p>The panel on the right always shows settings for what you're working on. Long sections can be collapsed with the chevron next to their title.</p>
 
         <div class="split" id="inspector-screen">
-          <div class="media"><img width="600" height="1300" class="shot" src="images/inspector-screen.jpg?v=5" alt="Inspector with nothing selected" loading="lazy"></div>
+          <div class="media"><img width="600" height="1300" class="shot" src="images/inspector-screen.jpg?v=6" alt="Inspector with nothing selected" loading="lazy"></div>
           <div class="text">
-            <h3>When nothing is selected: screen &amp; project</h3>
+            <h3>When nothing is selected: scene &amp; project</h3>
             <div class="defs">
-              <div>Screen card</div><div>Which screen you're on (for example <em>Screen 1 of 3</em>), with arrows to move to the previous or next screen.</div>
-              <div>Screen Settings</div><div>The screen's name and the <span class="ui">Follow Brand</span> switch (see <a href="#follow-brand">How the Brand works</a>). With it off, the screen's own background controls appear. <span class="ui">Duplicate</span> and <span class="ui">Delete</span> act on the whole screen, and <span class="ui">Apply Layout to All Screens</span> arranges every screen like this one.</div>
-              <div>Project</div><div>Project name, platform, devices, size and orientation.</div>
-              <div>All Screens</div><div>In All Screens view, with nothing picked, the Inspector shows settings for every screen, and <span class="ui">Edit Brand</span> takes you to the Brand. Click a screen to edit just that one.</div>
+              <div>Scene card</div><div>Which scene you're on (for example <em>Scene 1 of 3</em>), with arrows to move to the previous or next scene.</div>
+              <div>Scene Settings</div><div>The scene's name and the <span class="ui">Follow Brand</span> switch (see <a href="#follow-brand">How the Brand works</a>). With it off, the scene's own background controls appear. <span class="ui">Duplicate</span> and <span class="ui">Delete</span> act on the whole scene, and <span class="ui">Apply Layout to All Scenes</span> arranges every scene like this one.</div>
+              <div>Project</div><div>Project name, platform, devices, size and orientation. Social media projects also show their <span class="ui">Network</span>, which you can change: your scenes keep their shape when the new network has it.</div>
+              <div>All Scenes</div><div>In All Scenes view, with nothing picked, the Inspector shows settings for every scene, and <span class="ui">Edit Brand</span> takes you to the Brand. Click a scene to edit just that one.</div>
             </div>
           </div>
         </div>
 
         <div class="split reverse" id="inspector-layer">
-          <div class="media"><img width="600" height="1500" class="shot" src="images/inspector-device.jpg?v=5" alt="Inspector with a device selected" loading="lazy"></div>
+          <div class="media"><img width="600" height="1500" class="shot" src="images/inspector-device.jpg?v=6" alt="Inspector with a device selected" loading="lazy"></div>
           <div class="text">
             <h3>When a layer is selected</h3>
-            <p>A path at the top, like <span class="ui">‹ Screen 1 / Device Layer</span>, shows where the layer lives. Click <span class="ui">‹ Screen 1</span> to go back to the screen's settings. Next to the layer's name are buttons to lock and hide it.</p>
+            <p>A path at the top, like <span class="ui">‹ Scene 1 / Device Layer</span>, shows where the layer lives. Click <span class="ui">‹ Scene 1</span> to go back to the scene's settings. Next to the layer's name are buttons to lock and hide it.</p>
             <div class="defs">
-              <div>Arrange</div><div>Position (X, Y), size (W, H) and rotation, with buttons to rotate 90° left or right. The align bar lines the layer up with the screen. <span class="ui">Order</span> moves it forward or backward. <span class="ui">Span Screens</span> lets it stretch across neighboring screens.</div>
+              <div>Arrange</div><div>Position (X, Y), size (W, H) and rotation, with buttons to rotate 90° left or right. The align bar lines the layer up with the scene. <span class="ui">Order</span> moves it forward or backward. <span class="ui">Span Scenes</span> lets it stretch across neighboring scenes.</div>
               <div>Device</div><div><span class="ui">Frame</span> (Official or Mock), <span class="ui">Device</span>, <span class="ui">Color</span>, and for iPhone Duo, <span class="ui">Fold</span>. Then the <span class="ui">Screen</span> it shows, with <span class="ui">Replace…</span> and <span class="ui">Remove</span>, <span class="ui">Fit</span> (Fill or Fit) and <span class="ui">Orientation</span>. While the device follows the Brand, frame, device and color are set by the Brand.</div>
-              <div>Presentation</div><div>Quick looks: <span class="ui">Flat</span>, <span class="ui">Floating</span> and <span class="ui">Tilted</span>, plus <span class="ui">Reset</span>. Below, fine-tune the <span class="ui">Pose</span> (Flat, Turn Left, Turn Right, Lay Back) and its <span class="ui">Amount</span>.</div>
+              <div>Presentation</div><div>Poses, each previewed with your device: <span class="ui">Front</span>, <span class="ui">Turn Left</span>, <span class="ui">Turn Right</span>, <span class="ui">Lay Back</span>, <span class="ui">Float Left</span>, <span class="ui">Float Right</span>, <span class="ui">Lean Left</span>, <span class="ui">Lean Right</span>, <span class="ui">Close Up</span> and <span class="ui">Hero</span>. Fine-tune with <span class="ui">Turn</span>, <span class="ui">Tilt</span>, <span class="ui">Spin</span> and <span class="ui">Depth</span> (from Subtle to Close-up, as if the camera is right by the device), and pick a <span class="ui">Shadow</span>: Floating, Soft or None. Poses are made for mock frames: Apple asks that its own bezels stay upright, and the Stage reminds you if one doesn't.</div>
               <div>Appearance</div><div>Opacity, blur, corner radius and shadow (color, radius and offset).</div>
               <div>Delete Layer</div><div>At the bottom of every layer's settings.</div>
             </div>
@@ -306,16 +349,16 @@
         </div>
 
         <div class="split">
-          <div class="media"><img width="600" height="1500" class="shot" src="images/inspector-text.jpg?v=5" alt="Inspector with a headline selected" loading="lazy"></div>
+          <div class="media"><img width="600" height="1500" class="shot" src="images/inspector-text.jpg?v=6" alt="Inspector with a headline selected" loading="lazy"></div>
           <div class="text">
             <h3>Text, images, shapes and symbols</h3>
             <div class="defs">
-              <div>Text</div><div>Font, weight, color, tracking, alignment and caps, and <span class="ui">Warp</span> to bend it: Bulge, Pinch, Arch or Wave, with an amount. Edit the words themselves by double-clicking the text on the Stage. While the text follows the Brand, its style is locked (<span class="ui">Set by Brand · Detach · Screen Settings</span>); size and the words stay editable.</div>
+              <div>Text</div><div>Font, weight, color, tracking, alignment and caps, and <span class="ui">Warp</span> to bend it: Bulge, Pinch, Arch or Wave, with an amount. Edit the words themselves by double-clicking the text on the Stage. <span class="ui">Translate</span>, in the corner of the text box (or right-click the text on the Stage), translates it into another language with Apple's translation, on your Mac, keeping the style. While the text follows the Brand, its style is locked (<span class="ui">Set by Brand · Detach · Scene Settings</span>); size and the words stay editable.</div>
               <div>Image &amp; Crop</div><div>The image source, Fit and Mask, then crop with Scale and Offset. <span class="ui">Reset Crop</span> starts over.</div>
               <div>Shape</div><div>Shape type (including Triangle and Wave), fill (Solid, Linear, Radial or Image) and stroke.</div>
               <div>Symbol</div><div>Click the symbol to open the browser (below), plus twelve <span class="ui">Quick</span> picks, Color and Weight.</div>
             </div>
-            <figure class="figure" style="max-width:380px"><img width="760" height="920" class="shot" src="images/symbol-browser.jpg?v=5" alt="The SF Symbol browser" loading="lazy"><figcaption>Search by name or meaning, like “thumbs” or “award”, or browse categories.</figcaption></figure>
+            <figure class="figure" style="max-width:380px"><img width="760" height="920" class="shot" src="images/symbol-browser.jpg?v=6" alt="The SF Symbol browser" loading="lazy"><figcaption>Search by name or meaning, like “thumbs” or “award”, or browse categories.</figcaption></figure>
           </div>
         </div>
 
@@ -323,12 +366,11 @@
         <p>Hold <kbd>⇧</kbd> or <kbd>⌘</kbd> and click to select more than one layer. The Inspector then offers alignment, distribution (horizontally or vertically), <span class="ui">Group</span> and <span class="ui">Ungroup</span>, plus opacity and shadow for all of them.</p>
       </section>
 
-      <!-- 7 -->
       <section class="chapter" id="creative">
-        <span class="num">Chapter 7</span>
+        <span class="num">Chapter 8</span>
         <h2>Header &amp; Search Results</h2>
         <p>On iOS 27 and iPadOS 27, the App Store adds two new images, which Apple calls <em>creative assets</em>. PreviewStage makes them in the same project as your screenshots, with the same Brand.</p>
-        <figure class="figure"><img width="2000" height="1250" class="shot window" src="images/creative-header.jpg?v=5" alt="A Header open on the Stage, with the iPad and iPhone outlines and the green Art Safe Area" loading="lazy"><figcaption>A Header on the Stage: what iPad and iPhone show, and Apple's Art Safe Area in green.</figcaption></figure>
+        <figure class="figure"><img width="2000" height="1250" class="shot window" src="images/creative-header.jpg?v=6" alt="A Header open on the Stage, with the iPad and iPhone outlines and the green Art Safe Area" loading="lazy"><figcaption>A Header on the Stage: what iPad and iPhone show, and Apple's Art Safe Area in green.</figcaption></figure>
         <div class="defs">
           <div>Header</div><div>A wide picture across the top of your product page, the first thing people see when they open your app. Apple's advice: express your brand, with one clear idea. <em>3840 × 1646 (21:9).</em></div>
           <div>Search Results</div><div>Shown under your app in App Store search, in place of your screenshots. Apple's advice: make what your app does obvious at a glance, and show the real experience. <em>3840 × 2560 (3:2).</em></div>
@@ -337,21 +379,21 @@
         <p>Both are optional: without a Header, your page starts with your icon and name, and without a Search Results image, search shows your first screenshots. Creative assets are available for iPhone and iPad projects.</p>
 
         <div class="split" id="creative-make">
-          <div class="media"><img width="580" height="1300" class="shot" src="images/backstage-creative.jpg?v=5" alt="Backstage: the Creative Assets group" loading="lazy"></div>
+          <div class="media"><img width="580" height="1300" class="shot" src="images/backstage-creative.jpg?v=6" alt="Backstage: the Creative Assets group" loading="lazy"></div>
           <div class="text">
             <h3>Making one</h3>
             <ol>
-              <li>In <span class="ui">Backstage › Screens</span>, find <span class="ui">Creative Assets</span> under your screens.</li>
+              <li>In <span class="ui">Backstage › Scenes</span>, find <span class="ui">Creative Assets</span> under your scenes.</li>
               <li>Click <span class="ui">Header</span> or <span class="ui">Search Results</span>. It opens on the Stage at full size, starting with your app's name in your Brand.</li>
-              <li>Design it like a screen, or pick a <a href="#creative-templates">template</a>. Text, images, devices, shapes, symbols and Image Playground pictures all work here.</li>
-              <li>Click a screen in the list to go back to your screenshots.</li>
+              <li>Design it like a scene, or pick a <a href="#creative-templates">template</a>. Text, images, devices, shapes, symbols and Image Playground pictures all work here.</li>
+              <li>Click a scene in the list to go back to your screenshots.</li>
             </ol>
             <p>The Inspector shows the asset's size, a <span class="ui">Follow Brand</span> switch, <span class="ui">Choose a Template</span>, <span class="ui">See It in the App Store</span> (Preview Mode on the right page), <span class="ui">Remove</span>, and a short guide to what the asset is for.</p>
           </div>
         </div>
 
         <div class="split reverse" id="creative-safe">
-          <div class="media"><img width="600" height="1500" class="shot" src="images/inspector-creative.jpg?v=5" alt="Inspector for a Header" loading="lazy"></div>
+          <div class="media"><img width="600" height="1500" class="shot" src="images/inspector-creative.jpg?v=6" alt="Inspector for a Header" loading="lazy"></div>
           <div class="text">
             <h3>What each device shows</h3>
             <p>You make one image, and Apple crops it differently on each device. The Stage outlines each one:</p>
@@ -366,34 +408,84 @@
         </div>
 
         <div class="split" id="creative-templates">
-          <div class="media"><img width="580" height="1500" class="shot" src="images/creative-templates.jpg?v=5" alt="Header templates in Backstage" loading="lazy"></div>
+          <div class="media"><img width="580" height="1500" class="shot" src="images/creative-templates.jpg?v=6" alt="Header templates in Backstage" loading="lazy"></div>
           <div class="text">
             <h3>Templates</h3>
             <p>With a Header, Search Results or Universal image open, <span class="ui">Backstage › Templates</span> shows templates made for it, drawn in your Brand's colors with your app's name, tagline and screenshots.</p>
             <div class="defs">
               <div>Nature</div><div>Hills, Forest, Mountains, Ocean, Clouds, Flight, Sunset, Night Sky, Dunes, Sailing and City.</div>
               <div>Abstract</div><div>Windows, Spotlight, Horizon, Orbits, Ribbons, Glow, Dots, Waves and Rays.</div>
-              <div>Your App</div><div>Logo Lockup, Statement, Lineup, Your Screens (pictures of your finished screens), Fan and Simple.</div>
+              <div>Your App</div><div>Logo Lockup, Statement, Lineup, Your Scenes (pictures of your finished scenes), Fan and Simple.</div>
             </div>
             <p>For a Header, each scene shows your name as a wordmark, as in Apple's examples. For Search Results, it shows your promise and your app over the same scene. Every tree, cloud and mountain is an ordinary shape you can move, recolor or delete.</p>
           </div>
         </div>
-        <figure class="figure"><img width="2000" height="1250" class="shot window" src="images/creative-search.jpg?v=5" alt="A Search Results image on the Stage" loading="lazy"><figcaption>A Search Results image: the promise on the left, the app on the right.</figcaption></figure>
+        <figure class="figure"><img width="2000" height="1250" class="shot window" src="images/creative-search.jpg?v=6" alt="A Search Results image on the Stage" loading="lazy"><figcaption>A Search Results image: the promise on the left, the app on the right.</figcaption></figure>
         <p>Preview Mode shows the Header at the top of your product page and the Search Results image in search (see <a href="#preview">Preview Mode</a>). Export saves them full size in a <span class="ui">Creative Assets</span> folder, ready to upload in App Store Connect with a new version or in your Asset Library.</p>
       </section>
 
-      <!-- 8 -->
+      <section class="chapter" id="trailers">
+        <span class="num">Chapter 9</span>
+        <h2>Trailers</h2>
+        <p>Trailers are short videos of your app: App Store videos (Apple calls them App Previews) that autoplay on your product page and in search, or videos for your social network. Open the <span class="ui">Trailers</span> tab in Backstage.</p>
+        <figure class="figure"><img width="2000" height="1250" class="shot window" src="images/trailers.jpg?v=6" alt="A trailer open on the Stage with its timeline" loading="lazy"><figcaption>A trailer on the Stage: the picture as it will be exported, and its timeline of takes and captions.</figcaption></figure>
+
+        <h3 id="trailers-record">Recording takes</h3>
+        <p>A trailer is made of <strong>takes</strong>: recordings of you using your app.</p>
+        <ol>
+          <li>Run your app in the Simulator from Xcode. It appears under <span class="ui">Record</span> in Backstage. If nothing is running, Backstage tells you what to do.</li>
+          <li>Click <span class="ui">Record</span>. The button shows <span class="ui">Starting…</span> for a moment, then a red dot and the seconds counting.</li>
+          <li>Use your app in the Simulator, then click <span class="ui">Stop</span>. The take is saved (a card in the middle of the Stage shows its progress) and added to the end of the trailer as <em>Take 1</em>, <em>Take 2</em> and so on.</li>
+        </ol>
+        <p>Record as long as you like. You can also click <span class="ui">Import Takes…</span> or drop screen recordings onto the Stage; imported takes keep their file names. <span class="ui">Clean status bar</span> shows 9:41 and a full battery while recording.</p>
+
+        <div class="split" id="trailers-edit">
+          <div class="media"><img width="600" height="1500" class="shot" src="images/inspector-trailer.jpg?v=6" alt="Inspector for a take" loading="lazy"></div>
+          <div class="text">
+            <h3>Editing</h3>
+            <div class="defs">
+              <div>Timeline</div><div>Takes in order with their frames, and captions under them. Click or drag anywhere to move the playhead; press <kbd>Space</kbd> or click the picture to play and pause.</div>
+              <div>Takes</div><div>Click a take to select it, then drag its ends to trim it. Right-click to move it earlier or later, or delete it. The Inspector shows the take's trim and order.</div>
+              <div>Captions</div><div>Click <span class="ui">Caption</span> to add one at the playhead, in your Brand's headline font. Drag it to move it, drag its end to change how long it shows, and set its words and position (top or bottom) in the Inspector.</div>
+              <div>Trailer settings</div><div>Name, size, orientation and <span class="ui">Fade between takes</span>. Takes recorded the other way round get black bars instead of being cropped.</div>
+              <div>Poster</div><div>App Store only: the frame shown when autoplay is off. Move the playhead and click <span class="ui">Use Playhead</span>.</div>
+              <div>Soundtrack</div><div><span class="ui">Add Soundtrack</span> plays music under the trailer, with a volume slider; it fades out at the end. Use music you have the rights to.</div>
+              <div>Header card</div><div>At the top of the Inspector: the trailer, take or caption you're editing, with arrows to step to the next one.</div>
+            </div>
+          </div>
+        </div>
+
+        <h3>Length and the red line</h3>
+        <p>App Store videos are 15 to 30 seconds. A red <span class="ui">App Store ends</span> line marks 30 seconds on the timeline: everything before it is exported and uploaded, and anything after it stays in the editor but isn't. The badge next to the time tells you when a trailer is too short or <span class="ui">Exports the first 30 s</span>.</p>
+        <p><span class="ui">Export Trailer…</span> in the Inspector saves an .mp4 at Apple's exact size: H.264 at 30 frames per second with AAC stereo sound (a silent track is added when there's no music, as App Store Connect expects). Uploading sends it with your screenshots: see <a href="#upload">Uploading to App Store Connect</a>.</p>
+        <div class="note"><strong>Apple's rules</strong>App Store videos show only footage from your app: no hands, people or devices. Captions should stay on long enough to read, and prices and dates don't belong in them. Backstage lists these rules under the Trailers.</div>
+
+        <h3 id="trailers-social">Social media videos</h3>
+        <p>In a social media project, trailers follow your network instead of Apple's rules. Each trailer picks a <span class="ui">Format</span> in the Inspector, with its size and length limit, for example:</p>
+        <div class="defs">
+          <div>Instagram</div><div>Reel and Feed Video up to 3 minutes; Story up to 60 seconds.</div>
+          <div>TikTok</div><div>Vertical video up to 10 minutes.</div>
+          <div>YouTube</div><div>Short up to 3 minutes; regular Video with no limit.</div>
+          <div>Facebook</div><div>Reel and Feed Video; Story up to 60 seconds.</div>
+          <div>X</div><div>Landscape, Vertical or Square, up to 2 minutes 20 seconds.</div>
+          <div>LinkedIn</div><div>Square, Vertical or Landscape, up to 10 minutes.</div>
+          <div>Threads</div><div>Vertical or Portrait, up to 5 minutes.</div>
+          <div>Pinterest</div><div>Video Pins from 4 seconds to 15 minutes.</div>
+        </div>
+        <p>The red line sits at the format's limit, labeled with the format, like <span class="ui">Story limit</span>; formats without a limit have none. Backstage shows tips for your network, any running Simulator can be recorded, and a project can hold up to ten trailers. Networks change their limits from time to time.</p>
+      </section>
+
       <section class="chapter" id="playground">
-        <span class="num">Chapter 8</span>
+        <span class="num">Chapter 10</span>
         <h2>Image Playground</h2>
-        <p>Choose <span class="ui">Image ▸ Create with Image Playground…</span> to make a picture with Apple Intelligence. Describe what you want, pick a style, and click <span class="ui">Done</span>: the picture is added to the project's images and placed on the current screen or asset.</p>
+        <p>Choose <span class="ui">Image ▸ Create with Image Playground…</span> to make a picture with Apple Intelligence. Describe what you want, pick a style, and click <span class="ui">Done</span>: the picture is added to the project's images and placed on the current scene or asset.</p>
         <ul>
           <li>Select a text layer first and its words become the starting idea. Select an image first and it becomes the starting picture.</li>
           <li>Apple's on-device styles are offered: Animation, Illustration and Sketch.</li>
           <li>Image Playground needs Apple Intelligence. If it's off on your Mac, the menu says so.</li>
         </ul>
         <div class="split">
-          <div class="media"><img width="920" height="458" class="shot window" src="images/settings.jpg?v=5" alt="PreviewStage Settings" loading="lazy"></div>
+          <div class="media"><img width="920" height="458" class="shot window" src="images/settings.jpg?v=6" alt="PreviewStage Settings" loading="lazy"></div>
           <div class="text">
             <h3>ChatGPT styles</h3>
             <p>If you use ChatGPT with Apple Intelligence, turn on <span class="ui">Include ChatGPT styles</span> in <span class="ui">PreviewStage ▸ Settings…</span> (<kbd>⌘,</kbd>), or choose <span class="ui">Image Playground Settings…</span> in the Image menu. It's off by default: ChatGPT styles send your description, and any starting image, to OpenAI, and they need ChatGPT turned on in <span class="ui">System Settings › Apple Intelligence &amp; Siri</span>.</p>
@@ -401,17 +493,16 @@
         </div>
       </section>
 
-      <!-- 9 -->
       <section class="chapter" id="devices">
-        <span class="num">Chapter 9</span>
+        <span class="num">Chapter 11</span>
         <h2>Device frames</h2>
-        <p>Every device can use one of two kinds of frame. Switch with <span class="ui">Frame</span> in the Inspector, for one device or for all screens at once.</p>
+        <p>Every device can use one of two kinds of frame. Switch with <span class="ui">Frame</span> in the Inspector, for one device or for all scenes at once.</p>
         <div class="grid">
           <div class="card"><h3>Mock</h3><p>PreviewStage's own drawn frames. Always available, in several finishes, and free to tilt, rotate or shadow however you like.</p></div>
           <div class="card"><h3>Official</h3><p>Apple's own product bezels, downloaded from Apple when you choose them. They match the real devices exactly, and Apple asks that they're used as-is.</p></div>
         </div>
         <div class="split" style="margin-top:24px">
-          <div class="media"><img width="780" height="972" class="shot" src="images/device-picker.jpg?v=5" alt="Choosing an Apple device" loading="lazy"></div>
+          <div class="media"><img width="780" height="972" class="shot" src="images/device-picker.jpg?v=6" alt="Choosing an Apple device" loading="lazy"></div>
           <div class="text">
             <p>Only downloaded Apple devices can be chosen. Ones you haven't downloaded are dimmed, with a ↓ button to download them right there. If you switch to Official before downloading anything, PreviewStage keeps your mock and offers the download. Your device switches over when it's ready.</p>
             <p>Mock and Official each remember their own choice, so switching back and forth never loses your setup. To use the same device everywhere, set it once in Backstage › Brand › Devices.</p>
@@ -419,12 +510,11 @@
         </div>
       </section>
 
-      <!-- 10 -->
       <section class="chapter" id="library">
-        <span class="num">Chapter 10</span>
+        <span class="num">Chapter 12</span>
         <h2>Device Library</h2>
         <p>Open it from the round button on Home, from <span class="ui">Download More…</span> in the Device menu, or with <kbd>⌥⌘L</kbd>.</p>
-        <figure class="figure"><img width="1600" height="1291" class="shot window" src="images/device-library.jpg?v=5" alt="The Device Library window" loading="lazy"></figure>
+        <figure class="figure"><img width="1600" height="1291" class="shot window" src="images/device-library.jpg?v=6" alt="The Device Library window" loading="lazy"></figure>
         <ul>
           <li>Filter by <span class="ui">All</span>, <span class="ui">iPhone</span>, <span class="ui">iPad</span>, <span class="ui">Mac</span>, <span class="ui">Watch</span> or <span class="ui">TV</span>, and turn on <span class="ui">Installed</span> to see only what you've downloaded.</li>
           <li>Each pack shows Apple's own preview of its devices. Click <span class="ui">Get</span> to download it; installed packs show the real bezel and a green check.</li>
@@ -432,45 +522,64 @@
         </ul>
       </section>
 
-      <!-- 11 -->
       <section class="chapter" id="preview">
-        <span class="num">Chapter 11</span>
+        <span class="num">Chapter 13</span>
         <h2>Preview Mode</h2>
         <p>Click <span class="ui">▶</span> in the toolbar (<kbd>⌥⌘P</kbd>) to see your screenshots in the App Store on the device they're for: the iPhone App Store in an iPhone, the iPad App Store in an iPad, a Mac App Store window, or the Apple TV store on a TV. Apple Watch screenshots appear in the iPhone App Store, as they do for customers.</p>
-        <figure class="figure"><img width="2000" height="1250" class="shot window" src="images/preview.jpg?v=5" alt="Preview Mode showing an iPhone product page with a Header" loading="lazy"><figcaption>The product page on iPhone, with the Header at the top.</figcaption></figure>
+        <figure class="figure"><img width="2000" height="1250" class="shot window" src="images/preview.jpg?v=6" alt="Preview Mode showing an iPhone product page with a Header" loading="lazy"><figcaption>The product page on iPhone, with the Header at the top.</figcaption></figure>
         <div class="defs">
           <div>Product Page</div><div>Your Header (if you've made one), your icon, name and Get button, then your screenshots. Swipe them, use <kbd>←</kbd> <kbd>→</kbd>, or click one to see it full size.</div>
           <div>Search Result</div><div>Your app as it appears in App Store search, with your Search Results image or your first screenshots. iPhone and iPad only.</div>
           <div>Focus</div><div>One screenshot at a time, full size. Use the arrow buttons, <kbd>←</kbd> <kbd>→</kbd> or <kbd>Space</kbd>.</div>
         </div>
-        <figure class="figure"><img width="2000" height="1250" class="shot window" src="images/preview-search.jpg?v=5" alt="Preview Mode showing App Store search with a Search Results image" loading="lazy"><figcaption>Search on iPhone, with the Search Results image.</figcaption></figure>
+        <figure class="figure"><img width="2000" height="1250" class="shot window" src="images/preview-search.jpg?v=6" alt="Preview Mode showing App Store search with a Search Results image" loading="lazy"><figcaption>Search on iPhone, with the Search Results image.</figcaption></figure>
         <div class="defs">
           <div>Your Design / Live Now</div><div>With a <a href="#link-app">linked app</a>, this switch at the top right shows the screenshots on the App Store today on the same page, so you can compare them with your new design.</div>
         </div>
-        <p>A brand-new app has no ratings yet, so none are shown; a linked app shows its real ratings and details. Screens with an empty device are left out, and a note tells you which ones. Press <kbd>Esc</kbd> or close the window to return to the editor.</p>
+        <p>A brand-new app has no ratings yet, so none are shown; a linked app shows its real ratings and details. Scenes with an empty device are left out, and a note tells you which ones. Press <kbd>Esc</kbd> or close the window to return to the editor.</p>
       </section>
 
-      <!-- 12 -->
       <section class="chapter" id="export">
-        <span class="num">Chapter 12</span>
+        <span class="num">Chapter 14</span>
         <h2>Exporting</h2>
         <p>Click <span class="ui">Export</span> (<kbd>⌘E</kbd>).</p>
-        <figure class="figure"><img width="1440" height="1024" class="shot window" src="images/export.jpg?v=5" alt="The Export sheet" loading="lazy"></figure>
+        <figure class="figure"><img width="1440" height="1024" class="shot window" src="images/export.jpg?v=6" alt="The Export sheet" loading="lazy"></figure>
         <ol>
-          <li>Choose which screens to export: <span class="ui">All</span>, <span class="ui">Current</span>, or <span class="ui">Choose</span> to pick them.</li>
+          <li>Choose which scenes to export: <span class="ui">All</span>, <span class="ui">Current</span>, or <span class="ui">Choose</span> to pick them.</li>
           <li>Under <span class="ui">Sizes</span>, tick the sizes you need. Sizes Apple requires are marked <em>Required</em>. Other sizes are adapted automatically from your layout.</li>
-          <li>Under <span class="ui">File Names</span>, pick how files are named. Each choice shows the name your first file will get: <em>01 Screen 1.png</em>, <em>01.png</em> or <em>Daybook 01.png</em>.</li>
+          <li>Under <span class="ui">File Names</span>, pick how files are named. Each choice shows the name your first file will get: <em>01 Scene 1.png</em>, <em>01.png</em> or <em>Daybook 01.png</em>.</li>
           <li>Under <span class="ui">Creative Assets</span>, choose whether to include your Header and Search Results images.</li>
           <li>Export. Images are saved as PNG without transparency, which App Store Connect requires.</li>
         </ol>
-        <figure class="figure"><img width="1440" height="1024" class="shot window" src="images/export-2.jpg?v=5" alt="Export options: file names and creative assets" loading="lazy"></figure>
+        <figure class="figure"><img width="1440" height="1024" class="shot window" src="images/export-2.jpg?v=6" alt="Export options: file names and creative assets" loading="lazy"></figure>
         <p>With <span class="ui">Organize into folders by size</span> on, each size gets its own folder, like <em>iPhone 6.9-inch Display 1320x2868</em>, and creative assets go in a <em>Creative Assets</em> folder.</p>
-        <div class="note"><strong>Before you export</strong>Every device needs a screenshot: blank screens can't ship, so export waits until they're filled. If an Apple bezel doesn't follow Apple's guidelines, you'll see a warning first.</div>
+        <div class="note"><strong>Before you export</strong>Every device needs a screenshot: blank scenes can't ship, so export waits until they're filled. If an Apple bezel doesn't follow Apple's guidelines, you'll see a warning first.</div>
       </section>
 
-      <!-- 13 -->
+      <section class="chapter" id="upload">
+        <span class="num">Chapter 15</span>
+        <h2>Uploading to App Store Connect</h2>
+        <p>Send your screenshots, and your trailers, straight to your app's listing in App Store Connect, without saving files. Choose <span class="ui">File › Upload to App Store Connect…</span> (<kbd>⇧⌘U</kbd>), or click <span class="ui">Upload…</span> in the Export sheet.</p>
+        <h3>Connect once</h3>
+        <ol>
+          <li>In App Store Connect, open <span class="ui">Users and Access › Integrations › App Store Connect API</span>.</li>
+          <li>Make a key with the <span class="ui">App Manager</span> role and download its .p8 file (Apple lets you download it once).</li>
+          <li>In <span class="ui">PreviewStage › Settings › App Store Connect</span>, add the Issuer ID and the .p8 file. The Key ID fills itself in. The status turns green when it's connected.</li>
+        </ol>
+        <p>One key works for every app in your account. The private key is kept in your Mac's Keychain, readable only while your Mac is unlocked, and never leaves your Mac except to sign requests to Apple.</p>
+        <figure class="figure" style="max-width:560px"><img width="1120" height="416" class="shot window" src="images/upload.jpg?v=6" alt="The Upload to App Store Connect sheet" loading="lazy"><figcaption>Before you've connected, the sheet takes you to Settings.</figcaption></figure>
+        <h3>Upload</h3>
+        <ol>
+          <li>Pick the app, the version you're preparing, and the language.</li>
+          <li>Tick the sizes to send. Each one replaces the screenshots already there for that size and language.</li>
+          <li>With trailers in the project, <span class="ui">Include trailers</span> sends them too (trailers shorter than 15 seconds are left out; longer ones are cut at 30), with your poster frame.</li>
+          <li>Click <span class="ui">Upload</span>. When everything's sent you'll see <em>Curtain call.</em></li>
+        </ol>
+        <div class="note"><strong>Only to Apple</strong>Uploads go only to Apple's servers. Uploading is for App Store projects; social media projects export files for you to post.</div>
+      </section>
+
       <section class="chapter" id="shortcuts">
-        <span class="num">Chapter 13</span>
+        <span class="num">Chapter 16</span>
         <h2>Keyboard shortcuts</h2>
         <table class="keys">
           <tr><th>Projects</th><th></th></tr>
@@ -480,6 +589,8 @@
           <tr><td>Save</td><td><kbd>⌘S</kbd></td></tr>
           <tr><td>Import Screenshots</td><td><kbd>⇧⌘I</kbd></td></tr>
           <tr><td>Export</td><td><kbd>⌘E</kbd></td></tr>
+          <tr><td>Upload to App Store Connect</td><td><kbd>⇧⌘U</kbd></td></tr>
+          <tr><td>Capture from Simulator</td><td><kbd>⌃⌘C</kbd></td></tr>
           <tr><td>Settings</td><td><kbd>⌘,</kbd></td></tr>
         </table>
         <table class="keys">
@@ -491,7 +602,7 @@
           <tr><td>Copy Style / Paste Style</td><td><kbd>⌥⌘C</kbd> <kbd>⌥⌘V</kbd></td></tr>
           <tr><td>Insert Text</td><td><kbd>⌥⌘T</kbd></td></tr>
           <tr><td>Insert Device</td><td><kbd>⌥⌘D</kbd></td></tr>
-          <tr><td>New Screen</td><td><kbd>⇧⌘N</kbd></td></tr>
+          <tr><td>New Scene</td><td><kbd>⇧⌘N</kbd></td></tr>
         </table>
         <table class="keys">
           <tr><th>Arrange</th><th></th></tr>
@@ -500,7 +611,7 @@
           <tr><td>Group / Ungroup</td><td><kbd>⌘G</kbd> <kbd>⇧⌘G</kbd></td></tr>
           <tr><td>Lock</td><td><kbd>⌘L</kbd></td></tr>
           <tr><td>Hide</td><td><kbd>⇧⌘H</kbd></td></tr>
-          <tr><td>Apply Layout to All Screens</td><td><kbd>⇧⌘L</kbd></td></tr>
+          <tr><td>Apply Layout to All Scenes</td><td><kbd>⇧⌘L</kbd></td></tr>
         </table>
         <table class="keys">
           <tr><th>View</th><th></th></tr>
@@ -511,30 +622,34 @@
           <tr><td>Zoom to Fit / Actual Size</td><td><kbd>⌘0</kbd> <kbd>⌘1</kbd></td></tr>
           <tr><td>Show or Hide Smart Guides</td><td><kbd>⌘;</kbd></td></tr>
           <tr><td>Panorama View</td><td><kbd>⌥⌘K</kbd></td></tr>
+          <tr><td>Play or pause a trailer</td><td><kbd>Space</kbd></td></tr>
         </table>
       </section>
 
-      <!-- 14 -->
       <section class="chapter" id="faq">
-        <span class="num">Chapter 14</span>
+        <span class="num">Chapter 17</span>
         <h2>Help &amp; FAQ</h2>
         <details><summary>An Apple device in the menu is dimmed. Why can't I choose it?</summary><p>It hasn't been downloaded yet. Click its ↓ button, or open the Device Library and click Get. When the download finishes, you can choose it.</p></details>
-        <details><summary>Why won't my project export?</summary><p>At least one device has no screenshot. Blank screens can't go on the App Store, so add a screenshot to every device, or delete the empty screen. The export sheet shows how many are missing.</p></details>
+        <details><summary>Why won't my project export?</summary><p>At least one device has no screenshot. Blank scenes can't go on the App Store, so add a screenshot to every device, or delete the empty scene. The export sheet shows how many are missing.</p></details>
         <details><summary>What does “Apple's guidelines” mean?</summary><p>Apple asks that its product bezels are shown upright, uncropped, without added shadows or reflections, and with nothing on top. If you want a tilted or shadowed look, switch that device to a Mock frame, which you can style freely.</p></details>
-        <details><summary>Why are some screens missing in Preview Mode?</summary><p>Screens with an empty device are left out of the preview. Add a screenshot and they'll appear.</p></details>
+        <details><summary>Why are some scenes missing in Preview Mode?</summary><p>Scenes with an empty device are left out of the preview. Add a screenshot and they'll appear.</p></details>
         <details><summary>Can I use any SF Symbol?</summary><p>Thousands of them. Apple's logo and symbols that represent Apple's own products and features aren't available, because Apple's license doesn't allow them in your artwork.</p></details>
         <details><summary>I changed the orientation and my layout looks different.</summary><p>Your layout is kept and resized for the new shape, and devices turn with it. For a fresh layout, click Re-apply in the bar at the bottom of the Stage, or press <kbd>⌘Z</kbd> to undo the change.</p></details>
         <details><summary>Where did Backstage go?</summary><p>It may be hidden. Click the Backstage button at the left of the toolbar, or press <kbd>⌃⌘S</kbd>.</p></details>
-        <details><summary>Why can't I change a headline's font or a device?</summary><p>It follows the Brand, so its style is set in Backstage › Brand. Change it there to update every screen, turn off <span class="ui">Follow Brand</span> in Screen Settings to style that screen by hand, or right-click the item and choose <span class="ui">Detach from Brand</span>.</p></details>
-        <details><summary>What does the broken-link icon in Layers mean?</summary><p>That item was detached from the Brand, so it keeps its own style while the rest of its screen follows the Brand. Right-click it on the Stage and choose <span class="ui">Reattach to Brand</span> to link it again.</p></details>
+        <details><summary>Why can't I change a headline's font or a device?</summary><p>It follows the Brand, so its style is set in Backstage › Brand. Change it there to update every scene, turn off <span class="ui">Follow Brand</span> in Scene Settings to style that scene by hand, or right-click the item and choose <span class="ui">Detach from Brand</span>.</p></details>
+        <details><summary>What does the broken-link icon in Layers mean?</summary><p>That item was detached from the Brand, so it keeps its own style while the rest of its scene follows the Brand. Right-click it on the Stage and choose <span class="ui">Reattach to Brand</span> to link it again.</p></details>
         <details><summary>Do I need a Header or Search Results image?</summary><p>No, both are optional. Without them, the App Store shows your icon and name at the top of your page, and your first screenshots in search. They only appear on iOS 27 and iPadOS 27.</p></details>
         <details><summary>Why is the Art Safe Area so small?</summary><p>It's the part of your image that every device shows. Outside it, some devices crop. Keep your name and key art inside the green box, and let backgrounds, scenery and devices fill the rest.</p></details>
         <details><summary>Why don't I see Creative Assets in my project?</summary><p>They're for iPhone and iPad App Store projects. Mac, Apple Watch, Apple TV, Vision Pro and social media projects don't have them, because the App Store doesn't use them there.</p></details>
         <details><summary>Image Playground is greyed out.</summary><p>It needs Apple Intelligence. Turn it on in System Settings › Apple Intelligence &amp; Siri, on a Mac that supports it.</p></details>
         <details><summary>Where are the ChatGPT styles in Image Playground?</summary><p>They're off by default because they send your description to OpenAI. Turn on <span class="ui">Include ChatGPT styles</span> in PreviewStage ▸ Settings, after setting up ChatGPT in System Settings › Apple Intelligence &amp; Siri.</p></details>
-        <details><summary>Where are my live screenshots after linking?</summary><p>In Backstage › Assets, named after your app (for example <em>My App Live 01</em>, <em>My App Live 02</em>). Linking never changes your screens: drag a screenshot onto a device, or right-click it and choose <span class="ui">Use in Selected Device</span>. Press <kbd>⌘Z</kbd> once to undo the whole link.</p></details>
+        <details><summary>Where are my live screenshots after linking?</summary><p>In Backstage › Assets, named after your app (for example <em>My App Live 01</em>, <em>My App Live 02</em>). Linking never changes your scenes: drag a screenshot onto a device, or right-click it and choose <span class="ui">Use in Selected Device</span>. Press <kbd>⌘Z</kbd> once to undo the whole link.</p></details>
         <details><summary>Why can't I find my app when linking?</summary><p>Linking works for apps that are live on the App Store. Search looks in your Mac's App Store country and for your project's kind of device; pasting your app's App Store link always finds it.</p></details>
-        <details><summary>Why doesn't a linked app show my subtitle?</summary><p>Apple's public listing doesn't include an app's subtitle, so PreviewStage uses your first screen's headline in its place.</p></details>
+        <details><summary>Why doesn't a linked app show my subtitle?</summary><p>Apple's public listing doesn't include an app's subtitle, so PreviewStage uses your first scene's headline in its place.</p></details>
+        <details><summary>Record shows no Simulator. What do I do?</summary><p>Run your app from Xcode (<kbd>⌘R</kbd>) on a Simulator. For an App Store project it needs to be the project's kind of device, for example an iPhone Simulator for an iPhone project. It appears in Backstage › Trailers, and in Capture, within a couple of seconds.</p></details>
+        <details><summary>Why can't I export my trailer?</summary><p>App Store videos must be at least 15 seconds long; social formats have their own minimum. Add or lengthen takes until the badge next to the time says <em>Length OK</em>.</p></details>
+        <details><summary>My trailer is longer than 30 seconds. What happens?</summary><p>Everything before the red <span class="ui">App Store ends</span> line is exported and uploaded; the rest stays in the editor. Trim or reorder takes to choose what's in the first 30 seconds.</p></details>
+        <details><summary>Is my App Store Connect key safe?</summary><p>The private key is stored in your Mac's Keychain, only readable while your Mac is unlocked, and it never leaves your Mac. PreviewStage only connects to Apple with it.</p></details>
         <details><summary>Where are my projects saved?</summary><p>On your Mac, automatically, as you work. Open them any time from Home (<kbd>⇧⌘0</kbd>).</p></details>
         <div class="note" style="margin-top:22px"><strong>Still need help?</strong>Email <a href="mailto:gaudino.software@gmail.com">gaudino.software@gmail.com</a>. A screenshot of what you see helps a lot.</div>
       </section>
