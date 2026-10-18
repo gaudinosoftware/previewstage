@@ -104,6 +104,7 @@ kbd {
 .card h3 { margin-top: 0; }
 .card p:last-child { margin-bottom: 0; }
 .card .icon { font-size: 22px; margin-bottom: 10px; }
+.card .icon svg { width: 28px; height: 28px; display: block; }
 
 section.block { padding: 56px 0; border-top: 1px solid var(--line); }
 
